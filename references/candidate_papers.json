@@ -1,0 +1,2590 @@
+[
+  {
+    "id": "W2104396257",
+    "title": "Do You See What I Am Saying? Exploring Visual Enhancement of Speech Comprehension in Noisy Environments",
+    "authors": [
+      "Lars A. Ross",
+      "Dave Saint\u2010Amour",
+      "Victoria M. Leavitt",
+      "Daniel C. Javitt",
+      "John J. Foxe"
+    ],
+    "year": 2006,
+    "journal": "Cerebral Cortex",
+    "doi_or_url": "https://doi.org/10.1093/cercor/bhl024",
+    "citation_count": 666,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2099940393",
+    "title": "The Natural Statistics of Audiovisual Speech",
+    "authors": [
+      "Chandramouli Chandrasekaran",
+      "Andrea Trubanova",
+      "S\u00e9bastien Stillittano",
+      "Alice Caplier",
+      "Asif A. Ghazanfar"
+    ],
+    "year": 2009,
+    "journal": "PLoS Computational Biology",
+    "doi_or_url": "https://doi.org/10.1371/journal.pcbi.1000436",
+    "citation_count": 659,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2119106899",
+    "title": "Visual Modulation of Neurons in Auditory Cortex",
+    "authors": [
+      "Christoph Kayser",
+      "Christopher I. Petkov",
+      "Nikos K. Logothetis"
+    ],
+    "year": 2008,
+    "journal": "Cerebral Cortex",
+    "doi_or_url": "https://doi.org/10.1093/cercor/bhm187",
+    "citation_count": 534,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2021306965",
+    "title": "How Prediction Errors Shape Perception, Attention, and Motivation",
+    "authors": [
+      "Hanneke E.M. den Ouden",
+      "Peter Kok",
+      "Floris P. de Lange"
+    ],
+    "year": 2012,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2012.00548",
+    "citation_count": 525,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2093378872",
+    "title": "Infants deploy selective attention to the mouth of a talking face when learning speech",
+    "authors": [
+      "David J. Lewkowicz",
+      "Amy M. Hansen-Tift"
+    ],
+    "year": 2012,
+    "journal": "Proceedings of the National Academy of Sciences",
+    "doi_or_url": "https://doi.org/10.1073/pnas.1114783109",
+    "citation_count": 508,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2038171883",
+    "title": "Multisensory Temporal Integration in Autism Spectrum Disorders",
+    "authors": [
+      "Ryan A. Stevenson",
+      "Justin K. Siemann",
+      "Brittany C. Schneider",
+      "Haley E. Eberly",
+      "Tiffany G. Woynaroski",
+      "Stephen Camarata",
+      "Mark T. Wallace"
+    ],
+    "year": 2014,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.3615-13.2014",
+    "citation_count": 480,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2156150357",
+    "title": "Selective Attention and Audiovisual Integration: Is Attending to Both Modalities a Prerequisite for Early Integration?",
+    "authors": [
+      "Durk Talsma",
+      "Tracy Jill Doty",
+      "Marty G. Woldorff"
+    ],
+    "year": 2006,
+    "journal": "Cerebral Cortex",
+    "doi_or_url": "https://doi.org/10.1093/cercor/bhk016",
+    "citation_count": 436,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2151267355",
+    "title": "Selective Attention and Multisensory Integration: Multiple Phases of Effects on the Evoked Brain Activity",
+    "authors": [
+      "Durk Talsma",
+      "Marty G. Woldorff"
+    ],
+    "year": 2005,
+    "journal": "Journal of Cognitive Neuroscience",
+    "doi_or_url": "https://doi.org/10.1162/0898929054475172",
+    "citation_count": 429,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2144734076",
+    "title": "Multisensory Visual-Auditory Object Recognition in Humans: a High-density Electrical Mapping Study",
+    "authors": [
+      "Sophie Molholm"
+    ],
+    "year": 2004,
+    "journal": "Cerebral Cortex",
+    "doi_or_url": "https://doi.org/10.1093/cercor/bhh007",
+    "citation_count": 387,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2102133930",
+    "title": "Hearing Lips and Seeing Voices: How Cortical Areas Supporting Speech Production Mediate Audiovisual Speech Perception",
+    "authors": [
+      "Jeremy I Skipper",
+      "Virginie van Wassenhove",
+      "Howard C. Nusbaum",
+      "Steven L. Small"
+    ],
+    "year": 2007,
+    "journal": "Cerebral Cortex",
+    "doi_or_url": "https://doi.org/10.1093/cercor/bhl147",
+    "citation_count": 365,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2162430077",
+    "title": "Neural Correlates of Auditory\u2013Visual Stimulus Onset Asynchrony Detection",
+    "authors": [
+      "Khalafalla O. Bushara",
+      "Jordan Grafman",
+      "Mark Hallett"
+    ],
+    "year": 2001,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.21-01-00300.2001",
+    "citation_count": 363,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2061960534",
+    "title": "Bimodal speech: early suppressive visual effects in human auditory cortex",
+    "authors": [
+      "Julien Besle",
+      "Alexandra Fort",
+      "Claude Delpuech",
+      "Marie\u2010H\u00e9l\u00e8ne Giard"
+    ],
+    "year": 2004,
+    "journal": "European Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1111/j.1460-9568.2004.03670.x",
+    "citation_count": 337,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1970134504",
+    "title": "Perceptual Training Narrows the Temporal Window of Multisensory Binding",
+    "authors": [
+      "Albert R. Powers",
+      "Andrea R. Hillock",
+      "Mark T. Wallace"
+    ],
+    "year": 2009,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.3501-09.2009",
+    "citation_count": 328,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2144573398",
+    "title": "Perceptual Fusion and Stimulus Coincidence in the Cross-Modal Integration of Speech",
+    "authors": [
+      "Lee M. Miller",
+      "Mark D\u2019Esposito"
+    ],
+    "year": 2005,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.0896-05.2005",
+    "citation_count": 326,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2142393318",
+    "title": "Implicit Multisensory Associations Influence Voice Recognition",
+    "authors": [
+      "Katharina von Kriegstein",
+      "Anne\u2010Lise Giraud"
+    ],
+    "year": 2006,
+    "journal": "PLoS Biology",
+    "doi_or_url": "https://doi.org/10.1371/journal.pbio.0040326",
+    "citation_count": 309,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2038121453",
+    "title": "Crossmodal binding: Evaluating the \u201cunity assumption\u201d using audiovisual speech stimuli",
+    "authors": [
+      "Argiro Vatakis",
+      "Charles Spence"
+    ],
+    "year": 2007,
+    "journal": "Perception & Psychophysics",
+    "doi_or_url": "https://doi.org/10.3758/bf03193776",
+    "citation_count": 304,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2075636175",
+    "title": "Integration of Auditory and Visual Communication Information in the Primate Ventrolateral Prefrontal Cortex",
+    "authors": [
+      "Tadashi Sugihara",
+      "Mark D. Diltz",
+      "Bruno B. Averbeck",
+      "Lizabeth M. Romanski"
+    ],
+    "year": 2006,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.3550-06.2006",
+    "citation_count": 281,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2132545092",
+    "title": "Severe Multisensory Speech Integration Deficits in High-Functioning School-Aged Children with Autism Spectrum Disorder (ASD) and Their Resolution During Early Adolescence",
+    "authors": [
+      "John J. Foxe",
+      "Sophie Molholm",
+      "Victor A. Del Bene",
+      "Hans\u2010Peter Frey",
+      "Natalie Russo",
+      "Daniela Cavalet Blanco",
+      "Dave Saint\u2010Amour",
+      "Lars A. Ross"
+    ],
+    "year": 2013,
+    "journal": "Cerebral Cortex",
+    "doi_or_url": "https://doi.org/10.1093/cercor/bht213",
+    "citation_count": 254,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2043952803",
+    "title": "Auditory Cortex Tracks Both Auditory and Visual Stimulus Dynamics Using Low-Frequency Neuronal Phase Modulation",
+    "authors": [
+      "Huan Luo",
+      "Zuxiang Liu",
+      "David Poeppel"
+    ],
+    "year": 2010,
+    "journal": "PLoS Biology",
+    "doi_or_url": "https://doi.org/10.1371/journal.pbio.1000445",
+    "citation_count": 247,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2036147067",
+    "title": "Audiovisual multisensory integration",
+    "authors": [
+      "Charles Spence"
+    ],
+    "year": 2007,
+    "journal": "Nippon Onkyo Gakkaishi/Acoustical science and technology/Nihon Onkyo Gakkaishi",
+    "doi_or_url": "https://doi.org/10.1250/ast.28.61",
+    "citation_count": 247,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2015198688",
+    "title": "fMRI-Guided Transcranial Magnetic Stimulation Reveals That the Superior Temporal Sulcus Is a Cortical Locus of the McGurk Effect",
+    "authors": [
+      "Michael S. Beauchamp",
+      "Audrey Nath",
+      "Siavash Pasalar"
+    ],
+    "year": 2010,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.4865-09.2010",
+    "citation_count": 246,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2149740421",
+    "title": "Dual Neural Routing of Visual Facilitation in Speech Processing",
+    "authors": [
+      "Luc H. Arnal",
+      "Benjamin Morillon",
+      "Christian A. Kell",
+      "Anne\u2010Lise Giraud"
+    ],
+    "year": 2009,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.3194-09.2009",
+    "citation_count": 244,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2008960591",
+    "title": "Spatial and temporal factors during processing of audiovisual speech: a PET study",
+    "authors": [
+      "Emiliano Macaluso",
+      "Nathalie George",
+      "Raymond J. Dolan",
+      "Charles Spence",
+      "Jon Driver"
+    ],
+    "year": 2003,
+    "journal": "NeuroImage",
+    "doi_or_url": "https://doi.org/10.1016/j.neuroimage.2003.09.049",
+    "citation_count": 235,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2176376079",
+    "title": "Congruent Visual Speech Enhances Cortical Entrainment to Continuous Auditory Speech in Noise-Free Conditions",
+    "authors": [
+      "Michael J. Crosse",
+      "John S. Butler",
+      "Edmund C. Lalor"
+    ],
+    "year": 2015,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.1829-15.2015",
+    "citation_count": 232,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2906628916",
+    "title": "The neural dynamics of hierarchical Bayesian causal inference in multisensory perception",
+    "authors": [
+      "Tim Rohe",
+      "Ann\u2010Christine Ehlis",
+      "Uta Noppeney"
+    ],
+    "year": 2019,
+    "journal": "Nature Communications",
+    "doi_or_url": "https://doi.org/10.1038/s41467-019-09664-2",
+    "citation_count": 201,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2088079940",
+    "title": "Lip-Reading Aids Word Recognition Most in Moderate Noise: A Bayesian Explanation Using High-Dimensional Feature Space",
+    "authors": [
+      "Wei Ji",
+      "Xiang Zhou",
+      "Lars A. Ross",
+      "John J. Foxe",
+      "Lucas C. Parra"
+    ],
+    "year": 2009,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0004638",
+    "citation_count": 192,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2119891919",
+    "title": "Perspectives on sensory processing disorder: a call for translational research",
+    "authors": [
+      "Lucy Miller"
+    ],
+    "year": 2009,
+    "journal": "Frontiers in Integrative Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/neuro.07.022.2009",
+    "citation_count": 183,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2207553599",
+    "title": "Early gross motor skills predict the subsequent development of language in children with autism spectrum disorder",
+    "authors": [
+      "Rachael Bedford",
+      "Andrew Pickles",
+      "Catherine Lord"
+    ],
+    "year": 2015,
+    "journal": "Autism Research",
+    "doi_or_url": "https://doi.org/10.1002/aur.1587",
+    "citation_count": 181,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2014481898",
+    "title": "Dynamic Changes in Superior Temporal Sulcus Connectivity during Perception of Noisy Audiovisual Speech",
+    "authors": [
+      "Audrey Nath",
+      "Michael S. Beauchamp"
+    ],
+    "year": 2011,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.4853-10.2011",
+    "citation_count": 176,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1995154163",
+    "title": "Audiovisual Synchrony Improves Motion Discrimination via Enhanced Connectivity between Early Visual and Auditory Areas",
+    "authors": [
+      "Richard F. Lewis",
+      "Uta Noppeney"
+    ],
+    "year": 2010,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.5745-09.2010",
+    "citation_count": 175,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2139219598",
+    "title": "Eccentricity dependent auditory enhancement of visual stimulus detection but not discrimination",
+    "authors": [
+      "Stephanie Gleiss",
+      "Christoph Kayser"
+    ],
+    "year": 2013,
+    "journal": "Frontiers in Integrative Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnint.2013.00052",
+    "citation_count": 166,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2169153920",
+    "title": "Analysis by Synthesis: A (Re-)Emerging Program of Research for Language and Vision",
+    "authors": [
+      "Thomas G. Bever",
+      "David Poeppel"
+    ],
+    "year": 2010,
+    "journal": "Biolinguistics",
+    "doi_or_url": "https://doi.org/10.5964/bioling.8783",
+    "citation_count": 163,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2005750248",
+    "title": "Neural Correlates of Multisensory Perceptual Learning",
+    "authors": [
+      "Albert R. Powers",
+      "Matthew A. Hevey",
+      "Mark T. Wallace"
+    ],
+    "year": 2012,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.6138-11.2012",
+    "citation_count": 160,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2100649735",
+    "title": "Early multisensory interactions affect the competition among multiple visual objects",
+    "authors": [
+      "Erik Van der Burg",
+      "Durk Talsma",
+      "Christian N. L. Olivers",
+      "Clayton Hickey",
+      "Jan Theeuwes"
+    ],
+    "year": 2011,
+    "journal": "NeuroImage",
+    "doi_or_url": "https://doi.org/10.1016/j.neuroimage.2010.12.068",
+    "citation_count": 159,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2030065161",
+    "title": "Visual Activation and Audiovisual Interactions in the Auditory Cortex during Speech Perception: Intracranial Recordings in Humans",
+    "authors": [
+      "Julien Besle",
+      "Catherine Fischer",
+      "Aur\u00e9lie Bidet\u2010Caulet",
+      "Fran\u00e7oise Lecaignard",
+      "Olivier Bertrand",
+      "Marie\u2010H\u00e9l\u00e8ne Giard"
+    ],
+    "year": 2008,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.2875-08.2008",
+    "citation_count": 154,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2058339159",
+    "title": "Variability and stability in the McGurk effect: contributions of participants, stimuli, time, and response type",
+    "authors": [
+      "Debshila Basu Mallick",
+      "John F. Magnotti",
+      "Michael S. Beauchamp"
+    ],
+    "year": 2015,
+    "journal": "Psychonomic Bulletin & Review",
+    "doi_or_url": "https://doi.org/10.3758/s13423-015-0817-4",
+    "citation_count": 152,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3096022204",
+    "title": "The Margins of the Language Network in the Brain",
+    "authors": [
+      "Ingo Hertrich",
+      "Susanne Dietrich",
+      "Hermann Ackermann"
+    ],
+    "year": 2020,
+    "journal": "Frontiers in Communication",
+    "doi_or_url": "https://doi.org/10.3389/fcomm.2020.519955",
+    "citation_count": 141,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2050650787",
+    "title": "Auditory Processing in High-Functioning Adolescents with Autism Spectrum Disorder",
+    "authors": [
+      "Anne-Marie DePape",
+      "Geoffrey B. Hall",
+      "Barbara Tillmann",
+      "Laurel J. Trainor"
+    ],
+    "year": 2012,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0044084",
+    "citation_count": 141,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2105107414",
+    "title": "Sounds and beyond: multisensory and other non-auditory signals in the inferior colliculus",
+    "authors": [
+      "Kurtis Gruters",
+      "Jennifer M. Groh"
+    ],
+    "year": 2012,
+    "journal": "Frontiers in Neural Circuits",
+    "doi_or_url": "https://doi.org/10.3389/fncir.2012.00096",
+    "citation_count": 138,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2097831178",
+    "title": "On the Variability of the McGurk Effect: Audiovisual Integration Depends on Prestimulus Brain States",
+    "authors": [
+      "Julian Keil",
+      "Nadia M\u00fcller",
+      "Niklas Ihssen",
+      "Nathan Weisz"
+    ],
+    "year": 2011,
+    "journal": "Cerebral Cortex",
+    "doi_or_url": "https://doi.org/10.1093/cercor/bhr125",
+    "citation_count": 132,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1978436245",
+    "title": "Multisensory integration of emotional faces and voices in schizophrenics",
+    "authors": [
+      "B\u00e9atrice de Gelder",
+      "Jean Vroomen",
+      "Sjakko J. de Jong",
+      "Erik Masthoff",
+      "Fons J. Trompenaars",
+      "P.P.G. Hodiamont"
+    ],
+    "year": 2004,
+    "journal": "Schizophrenia Research",
+    "doi_or_url": "https://doi.org/10.1016/j.schres.2004.02.013",
+    "citation_count": 130,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2952985824",
+    "title": "Frontal and parietal alpha oscillations reflect attentional modulation of cross-modal matching",
+    "authors": [
+      "Jonas Misselhorn",
+      "Uwe Friese",
+      "Andreas K. Engel"
+    ],
+    "year": 2019,
+    "journal": "Scientific Reports",
+    "doi_or_url": "https://doi.org/10.1038/s41598-019-41636-w",
+    "citation_count": 129,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1999320134",
+    "title": "What You See Is Not (Always) What You Hear: Induced Gamma Band Responses Reflect Cross-Modal Interactions in Familiar Object Recognition",
+    "authors": [
+      "Shlomit Yuval\u2010Greenberg",
+      "Leon Y. Deouell"
+    ],
+    "year": 2007,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.4828-06.2007",
+    "citation_count": 124,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2148345678",
+    "title": "Auditory Cortex Encodes the Perceptual Interpretation of Ambiguous Sound",
+    "authors": [
+      "Niclas Kilian-H\u00fctten",
+      "Giancarlo Valente",
+      "Jean Vroomen",
+      "Elia Formisano"
+    ],
+    "year": 2011,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.4572-10.2011",
+    "citation_count": 120,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2034686576",
+    "title": "Rethinking the senses and their interactions: the case for sensory pluralism",
+    "authors": [
+      "Matthew Fulkerson"
+    ],
+    "year": 2014,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2014.01426",
+    "citation_count": 115,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2155494341",
+    "title": "Auditory selective attention is enhanced by a task-irrelevant temporally coherent visual stimulus in human listeners",
+    "authors": [
+      "Ross K. Maddox",
+      "Huriye Atilgan",
+      "Jennifer K. Bizley",
+      "Adrian K. C. Lee"
+    ],
+    "year": 2015,
+    "journal": "eLife",
+    "doi_or_url": "https://doi.org/10.7554/elife.04995",
+    "citation_count": 112,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2552723933",
+    "title": "Two Visual Pathways in Primates Based on Sampling of Space: Exploitation and Exploration of Visual Information",
+    "authors": [
+      "Bhavin R. Sheth",
+      "Ryan M. Young"
+    ],
+    "year": 2016,
+    "journal": "Frontiers in Integrative Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnint.2016.00037",
+    "citation_count": 110,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1993930228",
+    "title": "Causal inference of asynchronous audiovisual speech",
+    "authors": [
+      "John F. Magnotti",
+      "Wei Ji",
+      "Michael S. Beauchamp"
+    ],
+    "year": 2013,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2013.00798",
+    "citation_count": 109,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2155934075",
+    "title": "What is the McGurk effect?",
+    "authors": [
+      "Kaisa Tiippana"
+    ],
+    "year": 2014,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2014.00725",
+    "citation_count": 107,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2076317547",
+    "title": "Efficient Visual Search from Synchronized Auditory Signals Requires Transient Audiovisual Events",
+    "authors": [
+      "Erik Van der Burg",
+      "John Cass",
+      "Christian N. L. Olivers",
+      "Jan Theeuwes",
+      "David Alais"
+    ],
+    "year": 2010,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0010664",
+    "citation_count": 105,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2029778231",
+    "title": "The impact of multisensory integration deficits on speech perception in children with autism spectrum disorders",
+    "authors": [
+      "Ryan A. Stevenson",
+      "Magali Segers",
+      "Susanne Ferber",
+      "Morgan D. Barense",
+      "Mark T. Wallace"
+    ],
+    "year": 2014,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2014.00379",
+    "citation_count": 103,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2995028981",
+    "title": "Lip-Reading Enables the Brain to Synthesize Auditory Features of Unknown Silent Speech",
+    "authors": [
+      "Mathieu Bourguignon",
+      "Martijn Baart",
+      "Efthymia C. Kapnoula",
+      "Nicola Molinaro"
+    ],
+    "year": 2019,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.1101-19.2019",
+    "citation_count": 103,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2130490182",
+    "title": "Enhanced audiovisual integration with aging in speech perception: a heightened McGurk effect in older adults",
+    "authors": [
+      "Kaoru Sekiyama",
+      "Takahiro Soshi",
+      "Shinichi Sakamoto"
+    ],
+    "year": 2014,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2014.00323",
+    "citation_count": 103,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2784512740",
+    "title": "The Biology and Evolution of Speech: A Comparative Analysis",
+    "authors": [
+      "W. Tecumseh Fitch"
+    ],
+    "year": 2018,
+    "journal": "Annual Review of Linguistics",
+    "doi_or_url": "https://doi.org/10.1146/annurev-linguistics-011817-045748",
+    "citation_count": 102,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2202752616",
+    "title": "Oscillatory phase shapes syllable perception",
+    "authors": [
+      "Sanne ten Oever",
+      "Alexander T. Sack"
+    ],
+    "year": 2015,
+    "journal": "Proceedings of the National Academy of Sciences",
+    "doi_or_url": "https://doi.org/10.1073/pnas.1517519112",
+    "citation_count": 101,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2038548569",
+    "title": "No, There Is No 150 ms Lead of Visual Speech on Auditory Speech, but a Range of Audiovisual Asynchronies Varying from Small Audio Lead to Large Audio Lag",
+    "authors": [
+      "Jean\u2010Luc Schwartz",
+      "Christophe Savariaux"
+    ],
+    "year": 2014,
+    "journal": "PLoS Computational Biology",
+    "doi_or_url": "https://doi.org/10.1371/journal.pcbi.1003743",
+    "citation_count": 98,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2332697813",
+    "title": "The Curious Incident of Attention in Multisensory Integration: Bottom-up vs. Top-down",
+    "authors": [
+      "Emiliano Macaluso",
+      "Uta Noppeney",
+      "Durk Talsma",
+      "Tiziana Vercillo",
+      "Jess Hartcher-O\u2019Brien",
+      "Ruth Adam"
+    ],
+    "year": 2016,
+    "journal": "Multisensory Research",
+    "doi_or_url": "https://doi.org/10.1163/22134808-00002528",
+    "citation_count": 96,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2785729142",
+    "title": "Visual Information Present in Infragranular Layers of Mouse Auditory Cortex",
+    "authors": [
+      "Ryan J. Morrill",
+      "Andrea R. Hasenstaub"
+    ],
+    "year": 2018,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.3102-17.2018",
+    "citation_count": 96,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2588505309",
+    "title": "A Causal Inference Model Explains Perception of the McGurk Effect and Other Incongruent Audiovisual Speech",
+    "authors": [
+      "John F. Magnotti",
+      "Michael S. Beauchamp"
+    ],
+    "year": 2017,
+    "journal": "PLoS Computational Biology",
+    "doi_or_url": "https://doi.org/10.1371/journal.pcbi.1005229",
+    "citation_count": 94,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2083452559",
+    "title": "Speech through ears and eyes: interfacing the senses with the supramodal brain",
+    "authors": [
+      "Virginie van Wassenhove"
+    ],
+    "year": 2013,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2013.00388",
+    "citation_count": 85,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2094208486",
+    "title": "Effect of attentional load on audiovisual speech perception: evidence from ERPs",
+    "authors": [
+      "Agn\u00c3 \u0308s Alsius",
+      "Riikka M\u00c3\u00b6tt\u00c3\u00b6nen",
+      "Mikko Sams",
+      "Salvador Soto\u2010Faraco",
+      "Kaisa Tiippana"
+    ],
+    "year": 2014,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2014.00727",
+    "citation_count": 84,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2163452993",
+    "title": "Speech perception under adverse conditions: insights from behavioral, computational, and neuroscience research",
+    "authors": [
+      "Sara Guediche",
+      "Sheila E. Blumstein",
+      "Julie A. Fiez",
+      "Lori L. Holt"
+    ],
+    "year": 2014,
+    "journal": "Frontiers in Systems Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnsys.2013.00126",
+    "citation_count": 84,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2507653002",
+    "title": "Audiovisual Simultaneity Judgment and Rapid Recalibration throughout the Lifespan",
+    "authors": [
+      "Jean\u2010Paul Noel",
+      "Matthew De Niear",
+      "Erik Van der Burg",
+      "Mark T. Wallace"
+    ],
+    "year": 2016,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0161698",
+    "citation_count": 82,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2169867823",
+    "title": "Cross-modal Binding and Activated Attentional Networks during Audio-visual Speech Integration: a Functional MRI Study",
+    "authors": [
+      "Daisuke N. Saito",
+      "K. Yoshimura",
+      "Takanori Kochiyama",
+      "Tomohisa Okada",
+      "Manabu Honda",
+      "Norihiro Sadato"
+    ],
+    "year": 2005,
+    "journal": "Cerebral Cortex",
+    "doi_or_url": "https://doi.org/10.1093/cercor/bhi052",
+    "citation_count": 82,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2885391883",
+    "title": "Representational interactions during audiovisual speech entrainment: Redundancy in left posterior superior temporal gyrus and synergy in left motor cortex",
+    "authors": [
+      "Hyojin Park",
+      "Robin A. A. Ince",
+      "Philippe G. Schyns",
+      "Gregor Thut",
+      "Joachim Gro\u00df"
+    ],
+    "year": 2018,
+    "journal": "PLoS Biology",
+    "doi_or_url": "https://doi.org/10.1371/journal.pbio.2006558",
+    "citation_count": 81,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2184568381",
+    "title": "Different types of sounds influence gaze differently in videos",
+    "authors": [
+      "Guanghan Song",
+      "Denis Pellerin",
+      "Lionel Granjon"
+    ],
+    "year": 2013,
+    "journal": "Journal of Eye Movement Research",
+    "doi_or_url": "https://doi.org/10.16910/jemr.6.4.1",
+    "citation_count": 78,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2073063500",
+    "title": "Neural Correlates of Interindividual Differences in Children's Audiovisual Speech Perception",
+    "authors": [
+      "Audrey Nath",
+      "Eswen Fava",
+      "Michael S. Beauchamp"
+    ],
+    "year": 2011,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.2605-11.2011",
+    "citation_count": 77,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1975370719",
+    "title": "Seeing pitch: Visual information for lexical tones of Mandarin-Chinese",
+    "authors": [
+      "Trevor H. Chen",
+      "Dominic W. Massaro"
+    ],
+    "year": 2008,
+    "journal": "The Journal of the Acoustical Society of America",
+    "doi_or_url": "https://doi.org/10.1121/1.2839004",
+    "citation_count": 76,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1974359008",
+    "title": "The Fusion of Mental Imagery and Sensation in the Temporal Association Cortex",
+    "authors": [
+      "Christopher C. Berger",
+      "H. Henrik Ehrsson"
+    ],
+    "year": 2014,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.0943-14.2014",
+    "citation_count": 75,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2038578991",
+    "title": "An fMRI Study of Audiovisual Speech Perception Reveals Multisensory Interactions in Auditory Cortex",
+    "authors": [
+      "Kayoko Okada",
+      "Jonathan H. Venezia",
+      "William Matchin",
+      "Kourosh Saberi",
+      "Gregory Hickok"
+    ],
+    "year": 2013,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0068959",
+    "citation_count": 74,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2001174728",
+    "title": "Multisensory Representation of Frequency across Audition and Touch: High Density Electrical Mapping Reveals Early Sensory-Perceptual Coupling",
+    "authors": [
+      "John S. Butler",
+      "John J. Foxe",
+      "Ian C. Fiebelkorn",
+      "Manuel Mercier",
+      "Sophie Molholm"
+    ],
+    "year": 2012,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.1796-12.2012",
+    "citation_count": 73,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2115772541",
+    "title": "Musical Expertise Induces Audiovisual Integration of Abstract Congruency Rules",
+    "authors": [
+      "Evangelos Paraskevopoulos",
+      "Anja Kuchenbuch",
+      "Sibylle C. Herholz",
+      "Christo Pantev"
+    ],
+    "year": 2012,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.1947-12.2012",
+    "citation_count": 73,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1533801638",
+    "title": "Mappings between linguistic sound and motion",
+    "authors": [
+      "Christine Cuskley"
+    ],
+    "year": 2013,
+    "journal": "Public Journal of Semiotics",
+    "doi_or_url": "https://doi.org/10.37693/pjos.2013.5.9651",
+    "citation_count": 72,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2947891717",
+    "title": "The audio-visual integration effect on music emotion: Behavioral and physiological evidence",
+    "authors": [
+      "Fada Pan",
+      "Li Zhang",
+      "Yuhong Ou",
+      "Xinni Zhang"
+    ],
+    "year": 2019,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0217040",
+    "citation_count": 71,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2938273668",
+    "title": "Toward Testing for Multimodal Perception of Mating Signals",
+    "authors": [
+      "Wouter Halfwerk",
+      "Judith Varkevisser",
+      "Ralph Simon",
+      "Ezequiel Mendoza",
+      "Constance Scharff",
+      "Katharina Riebel"
+    ],
+    "year": 2019,
+    "journal": "Frontiers in Ecology and Evolution",
+    "doi_or_url": "https://doi.org/10.3389/fevo.2019.00124",
+    "citation_count": 71,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2943107157",
+    "title": "Sensorimotor influences on speech perception in pre-babbling infants: Replication and extension of Bruderer et al. (2015)",
+    "authors": [
+      "Dawoon Choi",
+      "Alison G. Bruderer",
+      "Janet F. Werker"
+    ],
+    "year": 2019,
+    "journal": "Psychonomic Bulletin & Review",
+    "doi_or_url": "https://doi.org/10.3758/s13423-019-01601-0",
+    "citation_count": 70,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2047432705",
+    "title": "Discriminating languages by speech-reading",
+    "authors": [
+      "Salvador Soto\u2010Faraco",
+      "Jordi Navarra",
+      "Whitney Weikum",
+      "Athena Vouloumanos",
+      "N\u00faria Sebasti\u00e1n\u2010Gall\u00e9s",
+      "Janet F. Werker"
+    ],
+    "year": 2007,
+    "journal": "Perception & Psychophysics",
+    "doi_or_url": "https://doi.org/10.3758/bf03193744",
+    "citation_count": 70,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W19599135",
+    "title": "Seeing Music? What musicians need to know about vision",
+    "authors": [
+      "Michael Schutz"
+    ],
+    "year": 2008,
+    "journal": "Empirical Musicology Review",
+    "doi_or_url": "https://doi.org/10.18061/1811/34098",
+    "citation_count": 69,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2147542433",
+    "title": "How previous experience shapes perception in different sensory modalities",
+    "authors": [
+      "Joel S. Snyder",
+      "Caspar M. Schwiedrzik",
+      "A. Davi Vitela",
+      "Luc\u00eda Melloni"
+    ],
+    "year": 2015,
+    "journal": "Frontiers in Human Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnhum.2015.00594",
+    "citation_count": 69,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2149984477",
+    "title": "Reduced Neural Integration of Letters and Speech Sounds in Dyslexic Children Scales with Individual Differences in Reading Fluency",
+    "authors": [
+      "Gojko \u017dari\u0107",
+      "Gorka Fraga Gonz\u00e1lez",
+      "Jurgen Tijms",
+      "Maurits W. van der Molen",
+      "Leo Blomert",
+      "Milene Bonte"
+    ],
+    "year": 2014,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0110337",
+    "citation_count": 68,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2560281793",
+    "title": "Audiovisual sentence recognition not predicted by susceptibility to the McGurk effect",
+    "authors": [
+      "Kristin J. Van Engen",
+      "Zilong Xie",
+      "Bharath Chandrasekaran"
+    ],
+    "year": 2016,
+    "journal": "Attention Perception & Psychophysics",
+    "doi_or_url": "https://doi.org/10.3758/s13414-016-1238-9",
+    "citation_count": 67,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1981989549",
+    "title": "Responses of Prefrontal Multisensory Neurons to Mismatching Faces and Vocalizations",
+    "authors": [
+      "Mar\u00eda M. Diehl",
+      "Lizabeth M. Romanski"
+    ],
+    "year": 2014,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.5168-13.2014",
+    "citation_count": 66,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1985467485",
+    "title": "A link between individual differences in multisensory speech perception and eye movements",
+    "authors": [
+      "Demet Gurler",
+      "Nathan Doyle",
+      "Edgar Y. Walker",
+      "John F. Magnotti",
+      "Michael S. Beauchamp"
+    ],
+    "year": 2015,
+    "journal": "Attention Perception & Psychophysics",
+    "doi_or_url": "https://doi.org/10.3758/s13414-014-0821-1",
+    "citation_count": 66,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1552553649",
+    "title": "Audition and vision share spatial attentional resources, yet attentional load does not disrupt audiovisual integration",
+    "authors": [
+      "Basil Wahn",
+      "Peter K\u00f6nig"
+    ],
+    "year": 2015,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2015.01084",
+    "citation_count": 65,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2002988191",
+    "title": "Auditory Perceptual Learning for Speech Perception Can be Enhanced by Audiovisual Training",
+    "authors": [
+      "Lynne E. Bernstein",
+      "Edward T. Auer",
+      "Silvio P. Eberhardt",
+      "Jintao Jiang"
+    ],
+    "year": 2013,
+    "journal": "Frontiers in Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnins.2013.00034",
+    "citation_count": 65,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2466238742",
+    "title": "Auditory perception in the aging brain: the role of inhibition and facilitation in early processing",
+    "authors": [
+      "George Stothart",
+      "Nina Kazanina"
+    ],
+    "year": 2016,
+    "journal": "Neurobiology of Aging",
+    "doi_or_url": "https://doi.org/10.1016/j.neurobiolaging.2016.06.022",
+    "citation_count": 64,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2135220764",
+    "title": "Cue Integration in Categorical Tasks: Insights from Audio-Visual Speech Perception",
+    "authors": [
+      "Vikranth R. Bejjanki",
+      "Meghan Clayards",
+      "David C. Knill",
+      "Richard \u039d. Aslin"
+    ],
+    "year": 2011,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0019812",
+    "citation_count": 63,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2013941666",
+    "title": "Prefrontal Neuronal Responses during Audiovisual Mnemonic Processing",
+    "authors": [
+      "Jaewon Hwang",
+      "Lizabeth M. Romanski"
+    ],
+    "year": 2015,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.1328-14.2015",
+    "citation_count": 63,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2888467690",
+    "title": "Cross-Modal Stochastic Resonance as a Universal Principle to Enhance Sensory Processing",
+    "authors": [
+      "Patrick Krau\u00df",
+      "Konstantin Tziridis",
+      "Achim Schilling",
+      "Holger Schulze"
+    ],
+    "year": 2018,
+    "journal": "Frontiers in Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnins.2018.00578",
+    "citation_count": 63,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1572921027",
+    "title": "Sex differences in multisensory speech processing in both typically developing children and those on the autism spectrum",
+    "authors": [
+      "Lars A. Ross",
+      "Victor A. Del Bene",
+      "Sophie Molholm",
+      "Hans\u2010Peter Frey",
+      "John J. Foxe"
+    ],
+    "year": 2015,
+    "journal": "Frontiers in Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnins.2015.00185",
+    "citation_count": 63,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2096729702",
+    "title": "The Impact of Spatial Incongruence on an Auditory-Visual Illusion",
+    "authors": [
+      "Hamish Innes-Brown",
+      "David P. Crewther"
+    ],
+    "year": 2009,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0006450",
+    "citation_count": 62,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2045757879",
+    "title": "Distinct cortical locations for integration of audiovisual speech and the McGurk effect",
+    "authors": [
+      "Laura C. Erickson",
+      "Brandon A. Zielinski",
+      "Jennifer E. V. Zielinski",
+      "Guoying Liu",
+      "Peter E. Turkeltaub",
+      "Amber M. Leaver",
+      "Josef P. Rauschecker"
+    ],
+    "year": 2014,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2014.00534",
+    "citation_count": 62,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2017221256",
+    "title": "Physical and Perceptual Factors Shape the Neural Mechanisms That Integrate Audiovisual Signals in Speech Comprehension",
+    "authors": [
+      "Hweeling Lee",
+      "Uta Noppeney"
+    ],
+    "year": 2011,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.6510-10.2011",
+    "citation_count": 61,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2149339904",
+    "title": "Emotional Cues during Simultaneous Face and Voice Processing: Electrophysiological Insights",
+    "authors": [
+      "Taosheng Liu",
+      "Ana P. Pinheiro",
+      "Zhongxin Zhao",
+      "Paul G. Nestor",
+      "Robert W. McCarley",
+      "Margaret Niznikiewicz"
+    ],
+    "year": 2012,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0031001",
+    "citation_count": 61,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2080363726",
+    "title": "Audio\u2010visual speech perception: a developmental <scp>ERP</scp> investigation",
+    "authors": [
+      "Victoria C. P. Knowland",
+      "Evelyne Mercure",
+      "Annette Karmiloff\u2010Smith",
+      "Frederic Dick",
+      "Michael S. C. Thomas"
+    ],
+    "year": 2013,
+    "journal": "Developmental Science",
+    "doi_or_url": "https://doi.org/10.1111/desc.12098",
+    "citation_count": 60,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2254151480",
+    "title": "Prestimulus Network Integration of Auditory Cortex Predisposes Near-Threshold Perception Independently of Local Excitability",
+    "authors": [
+      "Sabine Leske",
+      "Philipp Ruhnau",
+      "Julia Frey",
+      "Chrysa Lithari",
+      "Nadia M\u00fcller",
+      "Thomas Hartmann",
+      "Nathan Weisz"
+    ],
+    "year": 2015,
+    "journal": "Cerebral Cortex",
+    "doi_or_url": "https://doi.org/10.1093/cercor/bhv212",
+    "citation_count": 60,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2101790553",
+    "title": "Monkeys and Humans Share a Common Computation for Face/Voice Integration",
+    "authors": [
+      "Chandramouli Chandrasekaran",
+      "Luis Lemus",
+      "Andrea Trubanova",
+      "Matthias Gondan",
+      "Asif A. Ghazanfar"
+    ],
+    "year": 2011,
+    "journal": "PLoS Computational Biology",
+    "doi_or_url": "https://doi.org/10.1371/journal.pcbi.1002165",
+    "citation_count": 59,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3092182997",
+    "title": "Crossmodal Phase Reset and Evoked Responses Provide Complementary Mechanisms for the Influence of Visual Speech in Auditory Cortex",
+    "authors": [
+      "Pierre M\u00e9gevand",
+      "Manuel Mercier",
+      "David M. Groppe",
+      "Elana Zion Golumbic",
+      "Nima Mesgarani",
+      "Michael S. Beauchamp",
+      "Charles M. Schroeder",
+      "Ashesh D. Mehta"
+    ],
+    "year": 2020,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.0555-20.2020",
+    "citation_count": 59,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2008351912",
+    "title": "The effects of attention on the temporal integration of multisensory stimuli",
+    "authors": [
+      "Sarah E. Donohue",
+      "Jessica J. Green",
+      "Marty G. Woldorff"
+    ],
+    "year": 2015,
+    "journal": "Frontiers in Integrative Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnint.2015.00032",
+    "citation_count": 59,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1978208931",
+    "title": "Adaptation Aftereffects in Vocal Emotion Perception Elicited by Expressive Faces and Voices",
+    "authors": [
+      "Verena G. Skuk",
+      "Stefan R. Schweinberger"
+    ],
+    "year": 2013,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0081691",
+    "citation_count": 56,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2086025176",
+    "title": "The temporal distribution of information in audiovisual spoken-word identification",
+    "authors": [
+      "Alexandra Jesse",
+      "Dominic W. Massaro"
+    ],
+    "year": 2009,
+    "journal": "Attention Perception & Psychophysics",
+    "doi_or_url": "https://doi.org/10.3758/app.72.1.209",
+    "citation_count": 56,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2089031139",
+    "title": "Perception of Loudness Is Influenced by Emotion",
+    "authors": [
+      "Erkin Asutay",
+      "Daniel V\u00e4stfj\u00e4ll"
+    ],
+    "year": 2012,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0038660",
+    "citation_count": 55,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2076405631",
+    "title": "Combined diffusion-weighted and functional magnetic resonance imaging reveals a temporal-occipital network involved in auditory-visual object processing",
+    "authors": [
+      "Anton Beer",
+      "Tina Plank",
+      "Georg Meyer",
+      "Mark W. Greenlee"
+    ],
+    "year": 2013,
+    "journal": "Frontiers in Integrative Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnint.2013.00005",
+    "citation_count": 54,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2121136567",
+    "title": "Top-down and bottom-up modulation in processing bimodal face/voice stimuli",
+    "authors": [
+      "Marianne Latinus",
+      "Rufin VanRullen",
+      "Margot J. Taylor"
+    ],
+    "year": 2010,
+    "journal": "BMC Neuroscience",
+    "doi_or_url": "https://doi.org/10.1186/1471-2202-11-36",
+    "citation_count": 53,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2164260218",
+    "title": "The crossmodal facilitation effect is disrupted in alcoholism: A study with emotional stimuli",
+    "authors": [
+      "Pierre Maurage",
+      "Salvatore Campanella",
+      "Pierre Philippot",
+      "T.H. Pham",
+      "Fr\u00e9d\u00e9ric Joassin"
+    ],
+    "year": 2007,
+    "journal": "Alcohol and Alcoholism",
+    "doi_or_url": "https://doi.org/10.1093/alcalc/agm134",
+    "citation_count": 52,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2127431490",
+    "title": "Interactions between Auditory and Visual Semantic Stimulus Classes: Evidence for Common Processing Networks for Speech and Body Actions",
+    "authors": [
+      "Georg Meyer",
+      "Mark W. Greenlee",
+      "Sophie Wuerger"
+    ],
+    "year": 2010,
+    "journal": "Journal of Cognitive Neuroscience",
+    "doi_or_url": "https://doi.org/10.1162/jocn.2010.21593",
+    "citation_count": 52,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2475917100",
+    "title": "Skilled musicians are not subject to the McGurk effect",
+    "authors": [
+      "Alice Mado Proverbio",
+      "Gemma Massetti",
+      "Ezia Rizzi",
+      "Alberto Zani"
+    ],
+    "year": 2016,
+    "journal": "Scientific Reports",
+    "doi_or_url": "https://doi.org/10.1038/srep30423",
+    "citation_count": 52,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2797312794",
+    "title": "Neural networks supporting audiovisual integration for speech: A large-scale lesion study",
+    "authors": [
+      "Gregory Hickok",
+      "Corianne Rogalsky",
+      "William Matchin",
+      "Alexandra Basilakos",
+      "Julia Cai",
+      "Sara B. Pillay",
+      "Michelle Ferrill",
+      "Soren Mickelsen",
+      "Steven W. Anderson",
+      "Tracy Love",
+      "Jeffrey R. Binder",
+      "Julius Fridriksson"
+    ],
+    "year": 2018,
+    "journal": "Cortex",
+    "doi_or_url": "https://doi.org/10.1016/j.cortex.2018.03.030",
+    "citation_count": 52,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W3146316730",
+    "title": "Neurophysiological Indices of Audiovisual Speech Processing Reveal a Hierarchy of Multisensory Integration Effects",
+    "authors": [
+      "Aisling E. O\u2019Sullivan",
+      "Michael J. Crosse",
+      "Giovanni M. Di Liberto",
+      "Alain de Cheveign\u00e9",
+      "Edmund C. Lalor"
+    ],
+    "year": 2021,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.0906-20.2021",
+    "citation_count": 51,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2147172011",
+    "title": "Audiovisual Speech Integration Does Not Rely on the Motor System: Evidence from Articulatory Suppression, the McGurk Effect, and fMRI",
+    "authors": [
+      "William Matchin",
+      "Kier Groulx",
+      "Gregory Hickok"
+    ],
+    "year": 2013,
+    "journal": "Journal of Cognitive Neuroscience",
+    "doi_or_url": "https://doi.org/10.1162/jocn_a_00515",
+    "citation_count": 51,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2064966539",
+    "title": "Rapid, generalized adaptation to asynchronous audiovisual speech",
+    "authors": [
+      "Erik Van der Burg",
+      "Patrick T. Goodbourn"
+    ],
+    "year": 2015,
+    "journal": "Proceedings of the Royal Society B Biological Sciences",
+    "doi_or_url": "https://doi.org/10.1098/rspb.2014.3083",
+    "citation_count": 51,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1967774947",
+    "title": "Pareidolia in Infants",
+    "authors": [
+      "Masaharu Kato",
+      "Ryoko Mugitani"
+    ],
+    "year": 2015,
+    "journal": "PLoS ONE",
+    "doi_or_url": "https://doi.org/10.1371/journal.pone.0118539",
+    "citation_count": 50,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2269788437",
+    "title": "Differential Gaze Patterns on Eyes and Mouth During Audiovisual Speech Segmentation",
+    "authors": [
+      "Laina Lusk",
+      "Aaron D. Mitchel"
+    ],
+    "year": 2016,
+    "journal": "Frontiers in Psychology",
+    "doi_or_url": "https://doi.org/10.3389/fpsyg.2016.00052",
+    "citation_count": 49,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2111691469",
+    "title": "Lipreading and Covert Speech Production Similarly Modulate Human Auditory-Cortex Responses to Pure Tones",
+    "authors": [
+      "Jaakko Kauram\u00e4ki",
+      "Iiro P. J\u00e4\u00e4skel\u00e4inen",
+      "Riitta Hari",
+      "Riikka M\u00f6tt\u00f6nen",
+      "Josef P. Rauschecker",
+      "Mikko Sams"
+    ],
+    "year": 2010,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/jneurosci.1950-09.2010",
+    "citation_count": 48,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2744727500",
+    "title": "Audiovisual integration as conflict resolution: The conflict of the McGurk illusion",
+    "authors": [
+      "Luis Mor\u00eds Fern\u00e1ndez",
+      "Emiliano Macaluso",
+      "Salvador Soto\u2010Faraco"
+    ],
+    "year": 2017,
+    "journal": "Human Brain Mapping",
+    "doi_or_url": "https://doi.org/10.1002/hbm.23758",
+    "citation_count": 47,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1977091951",
+    "title": "Audiovisual integration during speech comprehension: An fMRI study comparing ROI\u2010based and whole brain analyses",
+    "authors": [
+      "Gregor R. Szycik",
+      "Henk Jansma",
+      "Thomas F. M\u00fcnte"
+    ],
+    "year": 2008,
+    "journal": "Human Brain Mapping",
+    "doi_or_url": "https://doi.org/10.1002/hbm.20640",
+    "citation_count": 47,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W1990780157",
+    "title": "Temporal dynamics of unimodal and multimodal feature binding",
+    "authors": [
+      "Sharon Zmigrod",
+      "Bernhard Hommel"
+    ],
+    "year": 2009,
+    "journal": "Attention Perception & Psychophysics",
+    "doi_or_url": "https://doi.org/10.3758/app.72.1.142",
+    "citation_count": 47,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2140797927",
+    "title": "Eluding the illusion? Schizophrenia, dopamine and the McGurk effect",
+    "authors": [
+      "Thomas White",
+      "Rebekah Wigton",
+      "Dan W. Joyce",
+      "Tracy Bobin",
+      "Christian Ferragamo",
+      "Nisha Wasim",
+      "Stephen Lisk",
+      "Sukhwinder S. Shergill"
+    ],
+    "year": 2014,
+    "journal": "Frontiers in Human Neuroscience",
+    "doi_or_url": "https://doi.org/10.3389/fnhum.2014.00565",
+    "citation_count": 47,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2093960704",
+    "title": "Effects of intrastimulus modality change on audiovisual time-to-arrival judgments",
+    "authors": [
+      "Michael Gordon",
+      "Lawrence D. Rosenblum"
+    ],
+    "year": 2005,
+    "journal": "Perception & Psychophysics",
+    "doi_or_url": "https://doi.org/10.3758/bf03193516",
+    "citation_count": 47,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  },
+  {
+    "id": "W2885894977",
+    "title": "The threshold for the McGurk effect in audio-visual noise decreases with development",
+    "authors": [
+      "Rebecca J. Hirst",
+      "Jemaine E. Stacey",
+      "Lucy Cragg",
+      "Paula C. Stacey",
+      "Harriet A. Allen"
+    ],
+    "year": 2018,
+    "journal": "Scientific Reports",
+    "doi_or_url": "https://doi.org/10.1038/s41598-018-30798-8",
+    "citation_count": 47,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "task_workflow",
+      "timing_parameters"
+    ],
+    "parameter_bindings": {},
+    "notes": ""
+  }
+]
