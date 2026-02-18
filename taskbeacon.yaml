@@ -6,8 +6,14 @@ variant: baseline
 cognitive_domain: []
 maturity: draft
 version:
-  release_tag: ""
+  release_tag: v0.1.1-dev
 contracts:
   psyflow_taps: v0.1.0
-evidence: []
+evidence:
+- W2061698928
+- W1963926913
+- W2015198688
+- W1976571557
+- W2127339766
+- W2104396257
 maintainer: []
