@@ -1,4 +1,23 @@
-﻿# CHANGELOG
+# CHANGELOG
+
+## [v0.2.1-dev] - 2026-03-02
+
+### Changed
+- Standardized `main.py` to one mode-aware runtime flow (`human|qa|sim`) with consistent QA/sim context handling.
+- Rewrote `src/run_trial.py` from legacy MID-template logic to McGurk-specific trial states:
+  - `fixation -> av_stimulus -> decision -> feedback -> inter_trial_interval`.
+- Aligned response handling with McGurk report categories (`ba/da/ga`) and condition-specific timeout triggers.
+- Repaired all references artifacts to contract schema:
+  - valid `references.yaml`,
+  - required headings and table columns in `references.md`, `parameter_mapping.md`, `stimulus_mapping.md`,
+  - required `## 1`..`## 8` task-logic audit sections including architecture and inference log.
+
+### Validation
+- `python C:\Users\frued\.codex\skills\task-build\scripts\check_task_standard.py --task-path e:\Taskbeacon\T000026-mcgurk`
+- `python -m psyflow.validate e:/Taskbeacon/T000026-mcgurk`
+- `psyflow-qa e:/Taskbeacon/T000026-mcgurk --no-maturity-update`
+- `python main.py sim --config config/config_scripted_sim.yaml`
+- `python main.py sim --config config/config_sampler_sim.yaml`
 
 ## [v0.2.0-dev] - 2026-02-19
 

@@ -1,15 +1,14 @@
-﻿# Stimulus Mapping
+# Stimulus Mapping
 
-Task: `McGurk Effect Task`
+## Mapping Table
 
-| Condition | Implemented Stimulus IDs | Source Paper ID | Evidence (quote/figure/table) | Implementation Mode | Notes |
-|---|---|---|---|---|---|
-| `congruent` | `audio_ba + mouth_ba`, `audio_da + mouth_da`, `audio_ga + mouth_ga`, plus shared face scaffold (`avatar_face`, `eye_left`, `eye_right`, `nose`) | `W2061698928` | Congruent audiovisual syllable pairings provide baseline speech-identification performance. | `psychopy_builtin` + `generated_reference_asset` | Audio files are local task assets (`assets/audio/*.wav`), visemes are PsychoPy primitives. |
-| `incongruent` | `audio_ba + mouth_ga`, `audio_ga + mouth_ba`, plus shared face scaffold | `W2061698928` | Incongruent audiovisual pairings are expected to increase fused `/da/` percepts (McGurk effect). | `psychopy_builtin` + `generated_reference_asset` | Pairings are sampled by `Controller.build_trial()` from configured `incongruent_pairs`. |
-| `audio_only` | `audio_ba|audio_da|audio_ga + mouth_none`, plus shared face scaffold | `W2104396257` | Auditory-only style control supports dissociating audiovisual integration from unimodal speech perception. | `psychopy_builtin` + `generated_reference_asset` | `mouth_none` removes informative articulatory visual cue. |
-| `all_conditions` | `instruction_text`, `fixation`, `speech_prompt`, `decision_prompt`, `key_hint`, `feedback_recorded`, `feedback_timeout`, `block_break`, `good_bye` | `W1976571557` | Shared instruction/report envelope for syllable identification and trial transitions. | `psychopy_builtin` | Participant-facing text is Chinese and uses `font: SimHei`. |
-
-Implementation mode legend:
-- `psychopy_builtin`: stimulus rendered via PsychoPy primitives configured in YAML.
-- `generated_reference_asset`: non-placeholder task assets generated to match reference-described stimuli.
-- `licensed_external_asset`: externally sourced licensed media with protocol linkage.
+| Condition | Stage/Phase | Stimulus IDs | Participant-Facing Content | Source Paper ID | Evidence (quote/figure/table) | Implementation Mode | Asset References | Notes |
+|---|---|---|---|---|---|---|---|---|
+| `congruent` | av_stimulus | `avatar_face`, `eye_left`, `eye_right`, `nose`, `mouth_ba|mouth_da|mouth_ga`, `audio_ba|audio_da|audio_ga`, `speech_prompt` | Matched auditory and visual syllables are shown/played together as baseline speech-perception trials. | W2061698928 | Congruent audiovisual trials provide baseline category report behavior. | psychopy_builtin + generated_reference_asset | `config/*.yaml -> stimuli.avatar_* / mouth_* / audio_* / speech_prompt` | Mouth and audio syllables match on each congruent trial. |
+| `incongruent` | av_stimulus | `avatar_face`, `eye_left`, `eye_right`, `nose`, `mouth_ba|mouth_ga`, `audio_ba|audio_ga`, `speech_prompt` | Mismatched audiovisual syllables are shown/played to elicit fusion percepts. | W2061698928 | Canonical incongruent pairings (`A=ba,V=ga` and `A=ga,V=ba`) are used to induce McGurk fusion. | psychopy_builtin + generated_reference_asset | `config/*.yaml -> stimuli.mouth_* / audio_*` | Pairing sampled from `controller.incongruent_pairs`. |
+| `audio_only` | av_stimulus | `avatar_face`, `eye_left`, `eye_right`, `nose`, `mouth_none`, `audio_ba|audio_da|audio_ga`, `speech_prompt` | Auditory syllable is presented with neutral/non-informative mouth cue. | W2104396257 | Auditory control supports comparison with audiovisual integration conditions. | psychopy_builtin + generated_reference_asset | `config/*.yaml -> stimuli.mouth_none / audio_*` | Visual mouth cue intentionally non-articulatory. |
+| `all_conditions` | fixation | `fixation` | Central `+` shown before each trial stage transitions. | W2061698928 | Temporal control around speech presentation is required; exact symbol is implementation-level. | psychopy_builtin | `config/*.yaml -> stimuli.fixation` | Uses jittered fixation duration. |
+| `all_conditions` | decision | `decision_prompt`, `key_hint` | Participant reports perceived syllable using `/ba/`, `/da/`, `/ga/` key mapping. | W1976571557 | Report categories are explicit syllable labels in McGurk tasks. | psychopy_builtin | `config/*.yaml -> stimuli.decision_prompt/key_hint` | Unit label is `decision` for QA/sim artifact consistency. |
+| `all_conditions` | feedback | `feedback_recorded` or `feedback_timeout` | Brief message confirms recorded response or timeout. | W2015198688 | Event-resolved analysis benefits from explicit post-response state separation. | psychopy_builtin | `config/*.yaml -> stimuli.feedback_*` | Trigger differs for recorded vs timeout feedback. |
+| `all_conditions` | inter_trial_interval | `fixation` | Short fixation before the next trial. | W2015198688 | ITI separates events for timing analyses. | psychopy_builtin | `config/*.yaml -> stimuli.fixation` | Trigger: `iti_onset`. |
+| `all_conditions` | envelope | `instruction_text`, `block_break`, `good_bye` | Instructions and summary screens for block/final report statistics. | W1976571557 | Participant must understand report mapping and task objective. | psychopy_builtin | `config/*.yaml -> stimuli.instruction_text/block_break/good_bye` | All participant-facing text remains config-driven. |
