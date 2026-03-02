@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "W2061698928",
     "title": "Temporal constraints on the McGurk effect",
@@ -10,58 +10,20 @@
     ],
     "year": 1996,
     "journal": "Perception & Psychophysics",
-    "doi_or_url": "https://doi.org/10.3758/bf03206811",
+    "doi_or_url": "https://doi.org/10.3758/BF03206811",
     "citation_count": 361,
     "is_high_impact": false,
     "open_access": true,
     "used_for": [
       "task_workflow",
-      "timing_parameters"
+      "stimulus_pairing",
+      "timing_constraints"
     ],
-    "parameter_bindings": {},
-    "notes": ""
-  },
-  {
-    "id": "W1963926913",
-    "title": "The McGurk effect in infants",
-    "authors": [
-      "Lawrence D. Rosenblum",
-      "Mark A. Schmuckler",
-      "Jennifer A. Johnson"
-    ],
-    "year": 1997,
-    "journal": "Perception & Psychophysics",
-    "doi_or_url": "https://doi.org/10.3758/bf03211902",
-    "citation_count": 347,
-    "is_high_impact": false,
-    "open_access": true,
-    "used_for": [
-      "task_workflow",
-      "timing_parameters"
-    ],
-    "parameter_bindings": {},
-    "notes": ""
-  },
-  {
-    "id": "W2015198688",
-    "title": "fMRI-Guided Transcranial Magnetic Stimulation Reveals That the Superior Temporal Sulcus Is a Cortical Locus of the McGurk Effect",
-    "authors": [
-      "Michael S. Beauchamp",
-      "Audrey Nath",
-      "Siavash Pasalar"
-    ],
-    "year": 2010,
-    "journal": "Journal of Neuroscience",
-    "doi_or_url": "https://doi.org/10.1523/jneurosci.4865-09.2010",
-    "citation_count": 247,
-    "is_high_impact": false,
-    "open_access": true,
-    "used_for": [
-      "task_workflow",
-      "timing_parameters"
-    ],
-    "parameter_bindings": {},
-    "notes": ""
+    "parameter_bindings": {
+      "controller.incongruent_pairs": "[['ba','ga'],['ga','ba']]",
+      "timing.av_duration": 1.1
+    },
+    "notes": "Primary paradigm reference for incongruent audiovisual fusion behavior."
   },
   {
     "id": "W1976571557",
@@ -74,50 +36,25 @@
     ],
     "year": 1991,
     "journal": "Perception & Psychophysics",
-    "doi_or_url": "https://doi.org/10.3758/bf03207536",
+    "doi_or_url": "https://doi.org/10.3758/BF03207536",
     "citation_count": 239,
     "is_high_impact": false,
     "open_access": true,
     "used_for": [
-      "task_workflow",
-      "timing_parameters"
+      "stimulus_design",
+      "response_categories"
     ],
-    "parameter_bindings": {},
-    "notes": ""
-  },
-  {
-    "id": "W2127339766",
-    "title": "H1-Histamine Receptor Affinity Predicts Short-Term Weight Gain for Typical and Atypical Antipsychotic Drugs",
-    "authors": [
-      "Wesley K. Kroeze",
-      "Sandra J. Hufeisen",
-      "Beth A Popadak",
-      "Sean M Renock",
-      "S Steinberg",
-      "Paul Ernsberger",
-      "Karu Jayathilake",
-      "Herbert Y. Meltzer",
-      "Bryan L. Roth"
-    ],
-    "year": 2003,
-    "journal": "Neuropsychopharmacology",
-    "doi_or_url": "https://doi.org/10.1038/sj.npp.1300027",
-    "citation_count": 782,
-    "is_high_impact": true,
-    "open_access": true,
-    "used_for": [
-      "task_workflow",
-      "timing_parameters"
-    ],
-    "parameter_bindings": {},
-    "notes": ""
+    "parameter_bindings": {
+      "task.key_list": "['f','j','k','space']"
+    },
+    "notes": "Supports syllable-level audiovisual speech identification framing."
   },
   {
     "id": "W2104396257",
     "title": "Do You See What I Am Saying? Exploring Visual Enhancement of Speech Comprehension in Noisy Environments",
     "authors": [
       "Lars A. Ross",
-      "Dave Saint‐Amour",
+      "Dave Saint-Amour",
       "Victoria M. Leavitt",
       "Daniel C. Javitt",
       "John J. Foxe"
@@ -129,10 +66,35 @@
     "is_high_impact": true,
     "open_access": true,
     "used_for": [
-      "task_workflow",
-      "timing_parameters"
+      "control_condition_design",
+      "audiovisual_comparison"
     ],
-    "parameter_bindings": {},
-    "notes": ""
+    "parameter_bindings": {
+      "task.conditions": "['congruent','incongruent','audio_only']"
+    },
+    "notes": "Supports auditory-only control interpretation for audiovisual benefit analyses."
+  },
+  {
+    "id": "W2015198688",
+    "title": "fMRI-Guided Transcranial Magnetic Stimulation Reveals That the Superior Temporal Sulcus Is a Cortical Locus of the McGurk Effect",
+    "authors": [
+      "Michael S. Beauchamp",
+      "Audrey Nath",
+      "Siavash Pasalar"
+    ],
+    "year": 2010,
+    "journal": "Journal of Neuroscience",
+    "doi_or_url": "https://doi.org/10.1523/JNEUROSCI.4865-09.2010",
+    "citation_count": 247,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": [
+      "event_alignment",
+      "analysis_targets"
+    ],
+    "parameter_bindings": {
+      "triggers.map.*": "Condition-specific AV onsets + category response events"
+    },
+    "notes": "Supports condition-resolved event timing and McGurk-related integration analyses."
   }
 ]

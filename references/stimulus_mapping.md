@@ -1,15 +1,15 @@
-# Stimulus Mapping
+﻿# Stimulus Mapping
 
 Task: `McGurk Effect Task`
 
 | Condition | Implemented Stimulus IDs | Source Paper ID | Evidence (quote/figure/table) | Implementation Mode | Notes |
 |---|---|---|---|---|---|
-| `congruent` | `congruent_cue`, `congruent_target`, `congruent_hit_feedback`, `congruent_miss_feedback`, `fixation` | `W2061698928` | Condition-specific trial flow and outcome/response mapping described in selected paradigm references. | `psychopy_builtin` | Condition row resolved against current `config/config.yaml` stimuli and `src/run_trial.py` phase logic. |
-| `incongruent` | `incongruent_cue`, `incongruent_target`, `incongruent_hit_feedback`, `incongruent_miss_feedback`, `fixation` | `W2061698928` | Condition-specific trial flow and outcome/response mapping described in selected paradigm references. | `psychopy_builtin` | Condition row resolved against current `config/config.yaml` stimuli and `src/run_trial.py` phase logic. |
-| `audio_only` | `audio_only_cue`, `audio_only_target`, `audio_only_hit_feedback`, `audio_only_miss_feedback`, `fixation` | `W2061698928` | Condition-specific trial flow and outcome/response mapping described in selected paradigm references. | `psychopy_builtin` | Condition row resolved against current `config/config.yaml` stimuli and `src/run_trial.py` phase logic. |
-| `all_conditions` | `instruction_text`, `block_break`, `good_bye`, `fixation` | `W2061698928` | Shared instruction, transition, and fixation assets support the common task envelope across all conditions. | `psychopy_builtin` | Shared assets are condition-agnostic and used in every run mode. |
+| `congruent` | `audio_ba + mouth_ba`, `audio_da + mouth_da`, `audio_ga + mouth_ga`, plus shared face scaffold (`avatar_face`, `eye_left`, `eye_right`, `nose`) | `W2061698928` | Congruent audiovisual syllable pairings provide baseline speech-identification performance. | `psychopy_builtin` + `generated_reference_asset` | Audio files are local task assets (`assets/audio/*.wav`), visemes are PsychoPy primitives. |
+| `incongruent` | `audio_ba + mouth_ga`, `audio_ga + mouth_ba`, plus shared face scaffold | `W2061698928` | Incongruent audiovisual pairings are expected to increase fused `/da/` percepts (McGurk effect). | `psychopy_builtin` + `generated_reference_asset` | Pairings are sampled by `Controller.build_trial()` from configured `incongruent_pairs`. |
+| `audio_only` | `audio_ba|audio_da|audio_ga + mouth_none`, plus shared face scaffold | `W2104396257` | Auditory-only style control supports dissociating audiovisual integration from unimodal speech perception. | `psychopy_builtin` + `generated_reference_asset` | `mouth_none` removes informative articulatory visual cue. |
+| `all_conditions` | `instruction_text`, `fixation`, `speech_prompt`, `decision_prompt`, `key_hint`, `feedback_recorded`, `feedback_timeout`, `block_break`, `good_bye` | `W1976571557` | Shared instruction/report envelope for syllable identification and trial transitions. | `psychopy_builtin` | Participant-facing text is Chinese and uses `font: SimHei`. |
 
 Implementation mode legend:
-- `psychopy_builtin`: stimulus rendered via PsychoPy primitives in config.
-- `generated_reference_asset`: task-specific synthetic assets generated from reference-described stimulus rules.
+- `psychopy_builtin`: stimulus rendered via PsychoPy primitives configured in YAML.
+- `generated_reference_asset`: non-placeholder task assets generated to match reference-described stimuli.
 - `licensed_external_asset`: externally sourced licensed media with protocol linkage.

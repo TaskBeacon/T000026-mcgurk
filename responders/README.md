@@ -1,6 +1,9 @@
-# Responders
+﻿# Responders
 
-Put task-specific simulation responders/samplers here.
+Task-specific responders for `T000026-mcgurk`.
 
-- Scripted sim uses `config/config_scripted_sim.yaml`.
-- Sampler sim uses `config/config_sampler_sim.yaml` and should point to a class in this folder.
+- Scripted simulation uses `config/config_scripted_sim.yaml`.
+- Sampler simulation uses `responders.task_sampler:TaskSamplerResponder` with condition-dependent percept sampling:
+  - high match rate for `congruent`
+  - elevated `/da/` fusion probability for `incongruent`
+  - auditory-match tendency for `audio_only`

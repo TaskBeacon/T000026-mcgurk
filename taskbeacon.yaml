@@ -1,4 +1,4 @@
-id: T000026
+﻿id: T000026
 slug: mcgurk
 title: McGurk Effect Task
 acquisition: behavior
@@ -6,14 +6,12 @@ variant: baseline
 cognitive_domain: []
 maturity: draft
 version:
-  release_tag: v0.1.1-dev
+  release_tag: v0.2.0-dev
 contracts:
   psyflow_taps: v0.1.0
 evidence:
-- W2061698928
-- W1963926913
-- W2015198688
-- W1976571557
-- W2127339766
-- W2104396257
+  - W2061698928
+  - W1976571557
+  - W2104396257
+  - W2015198688
 maintainer: []

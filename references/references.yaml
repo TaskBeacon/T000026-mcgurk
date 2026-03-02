@@ -1,121 +1,83 @@
-task_id: T000026
-generated_at: '2026-02-18T16:51:54Z'
-selection_policy: openalex_filter_plus_manual_curation
+﻿task_id: T000026
+generated_at: '2026-02-19T12:40:00Z'
+selection_policy: manual_curation_literature_first
 citation_threshold: 100
 papers:
-- id: W2061698928
-  title: Temporal constraints on the McGurk effect
-  authors:
-  - Kevin G. Munhall
-  - Paul L. Gribble
-  - Lawrence Sacco
-  - Michael Ward
-  year: 1996
-  journal: Perception & Psychophysics
-  doi_or_url: https://doi.org/10.3758/bf03206811
-  citation_count: 361
-  is_high_impact: false
-  open_access: true
-  used_for:
-  - task_workflow
-  - timing_parameters
-  parameter_bindings: {}
-  notes: ''
-- id: W1963926913
-  title: The McGurk effect in infants
-  authors:
-  - Lawrence D. Rosenblum
-  - Mark A. Schmuckler
-  - Jennifer A. Johnson
-  year: 1997
-  journal: Perception & Psychophysics
-  doi_or_url: https://doi.org/10.3758/bf03211902
-  citation_count: 347
-  is_high_impact: false
-  open_access: true
-  used_for:
-  - task_workflow
-  - timing_parameters
-  parameter_bindings: {}
-  notes: ''
-- id: W2015198688
-  title: fMRI-Guided Transcranial Magnetic Stimulation Reveals That the Superior Temporal
-    Sulcus Is a Cortical Locus of the McGurk Effect
-  authors:
-  - Michael S. Beauchamp
-  - Audrey Nath
-  - Siavash Pasalar
-  year: 2010
-  journal: Journal of Neuroscience
-  doi_or_url: https://doi.org/10.1523/jneurosci.4865-09.2010
-  citation_count: 247
-  is_high_impact: false
-  open_access: true
-  used_for:
-  - task_workflow
-  - timing_parameters
-  parameter_bindings: {}
-  notes: ''
-- id: W1976571557
-  title: 'Integrating speech information across talkers, gender, and sensory modality:
-    Female faces and male voices in the McGurk effect'
-  authors:
-  - Kerry P. Green
-  - Patricia K. Kuhl
-  - Andrew N. Meltzoff
-  - Erica B. Stevens
-  year: 1991
-  journal: Perception & Psychophysics
-  doi_or_url: https://doi.org/10.3758/bf03207536
-  citation_count: 239
-  is_high_impact: false
-  open_access: true
-  used_for:
-  - task_workflow
-  - timing_parameters
-  parameter_bindings: {}
-  notes: ''
-- id: W2127339766
-  title: H1-Histamine Receptor Affinity Predicts Short-Term Weight Gain for Typical
-    and Atypical Antipsychotic Drugs
-  authors:
-  - Wesley K. Kroeze
-  - Sandra J. Hufeisen
-  - Beth A Popadak
-  - Sean M Renock
-  - S Steinberg
-  - Paul Ernsberger
-  - Karu Jayathilake
-  - Herbert Y. Meltzer
-  - Bryan L. Roth
-  year: 2003
-  journal: Neuropsychopharmacology
-  doi_or_url: https://doi.org/10.1038/sj.npp.1300027
-  citation_count: 782
-  is_high_impact: true
-  open_access: true
-  used_for:
-  - task_workflow
-  - timing_parameters
-  parameter_bindings: {}
-  notes: ''
-- id: W2104396257
-  title: Do You See What I Am Saying? Exploring Visual Enhancement of Speech Comprehension
-    in Noisy Environments
-  authors:
-  - Lars A. Ross
-  - Dave Saint‐Amour
-  - Victoria M. Leavitt
-  - Daniel C. Javitt
-  - John J. Foxe
-  year: 2006
-  journal: Cerebral Cortex
-  doi_or_url: https://doi.org/10.1093/cercor/bhl024
-  citation_count: 668
-  is_high_impact: true
-  open_access: true
-  used_for:
-  - task_workflow
-  - timing_parameters
-  parameter_bindings: {}
-  notes: ''
+  - id: W2061698928
+    title: Temporal constraints on the McGurk effect
+    authors:
+      - Kevin G. Munhall
+      - Paul L. Gribble
+      - Lawrence Sacco
+      - Michael Ward
+    year: 1996
+    journal: Perception & Psychophysics
+    doi_or_url: https://doi.org/10.3758/BF03206811
+    citation_count: 361
+    is_high_impact: false
+    open_access: true
+    used_for:
+      - task_workflow
+      - stimulus_pairing
+      - timing_constraints
+    parameter_bindings:
+      controller.incongruent_pairs: "[['ba','ga'],['ga','ba']]"
+      timing.av_duration: 1.1
+    notes: Primary McGurk paradigm reference.
+  - id: W1976571557
+    title: Integrating speech information across talkers, gender, and sensory modality: Female faces and male voices in the McGurk effect
+    authors:
+      - Kerry P. Green
+      - Patricia K. Kuhl
+      - Andrew N. Meltzoff
+      - Erica B. Stevens
+    year: 1991
+    journal: Perception & Psychophysics
+    doi_or_url: https://doi.org/10.3758/BF03207536
+    citation_count: 239
+    is_high_impact: false
+    open_access: true
+    used_for:
+      - stimulus_design
+      - response_categories
+    parameter_bindings:
+      task.key_list: "['f','j','k','space']"
+    notes: Supports syllable-level report structure.
+  - id: W2104396257
+    title: Do You See What I Am Saying? Exploring Visual Enhancement of Speech Comprehension in Noisy Environments
+    authors:
+      - Lars A. Ross
+      - Dave Saint-Amour
+      - Victoria M. Leavitt
+      - Daniel C. Javitt
+      - John J. Foxe
+    year: 2006
+    journal: Cerebral Cortex
+    doi_or_url: https://doi.org/10.1093/cercor/bhl024
+    citation_count: 668
+    is_high_impact: true
+    open_access: true
+    used_for:
+      - control_condition_design
+      - audiovisual_comparison
+    parameter_bindings:
+      task.conditions: "['congruent','incongruent','audio_only']"
+    notes: Supports auditory-only control interpretation.
+  - id: W2015198688
+    title: fMRI-Guided Transcranial Magnetic Stimulation Reveals That the Superior Temporal Sulcus Is a Cortical Locus of the McGurk Effect
+    authors:
+      - Michael S. Beauchamp
+      - Audrey Nath
+      - Siavash Pasalar
+    year: 2010
+    journal: Journal of Neuroscience
+    doi_or_url: https://doi.org/10.1523/JNEUROSCI.4865-09.2010
+    citation_count: 247
+    is_high_impact: false
+    open_access: true
+    used_for:
+      - event_alignment
+      - analysis_targets
+    parameter_bindings:
+      triggers.map: condition-specific audiovisual and response events
+    notes: Supports event-resolved McGurk analyses.

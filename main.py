@@ -1,3 +1,5 @@
+﻿from __future__ import annotations
+
 from functools import partial
 from pathlib import Path
 
@@ -24,8 +26,6 @@ from src import Controller, run_trial
 
 
 def _make_qa_trigger_runtime():
-    # In QA mode we don't want to hit real hardware.
-    # Trigger logging (planned/executed) is handled by TriggerRuntime.
     return initialize_triggers(mock=True)
 
 
@@ -46,6 +46,78 @@ def _parse_args(task_root: Path) -> TaskRunOptions:
     )
 
 
+def _as_bool(value) -> bool:
+    if isinstance(value, bool):
+        return value
+    return str(value).strip().lower() in {"1", "true", "yes", "y"}
+
+
+def _as_float(value) -> float | None:
+    try:
+        return float(value)
+    except Exception:
+        return None
+
+
+def _mean(values: list[float]) -> float:
+    if not values:
+        return 0.0
+    return float(sum(values) / len(values))
+
+
+def _rate(rows: list[dict], key: str, value: str) -> float:
+    if not rows:
+        return 0.0
+    matches = sum(1 for row in rows if str(row.get(key, "")).strip().lower() == value)
+    return float(matches / len(rows))
+
+
+def _summarize_trials(trials: list[dict]) -> dict[str, float | int]:
+    total_trials = len(trials)
+    if total_trials == 0:
+        return {
+            "total_trials": 0,
+            "responded_trials": 0,
+            "incongruent_responded": 0,
+            "response_rate": 0.0,
+            "fusion_rate": 0.0,
+            "ba_rate": 0.0,
+            "da_rate": 0.0,
+            "ga_rate": 0.0,
+            "mean_rt_ms": 0.0,
+        }
+
+    responded = [row for row in trials if not _as_bool(row.get("decision_timed_out", False))]
+    responded_trials = len(responded)
+
+    incongruent_responded = [
+        row
+        for row in responded
+        if str(row.get("condition", "")).strip().lower() == "incongruent"
+    ]
+
+    rt_values = [_as_float(row.get("decision_rt_s", None)) for row in responded]
+    rt_values = [value for value in rt_values if value is not None]
+    mean_rt_ms = _mean(rt_values) * 1000.0 if rt_values else 0.0
+
+    if incongruent_responded:
+        fusion_rate = _rate(incongruent_responded, "reported_syllable", "da")
+    else:
+        fusion_rate = 0.0
+
+    return {
+        "total_trials": int(total_trials),
+        "responded_trials": int(responded_trials),
+        "incongruent_responded": int(len(incongruent_responded)),
+        "response_rate": float(responded_trials / total_trials),
+        "fusion_rate": float(fusion_rate),
+        "ba_rate": _rate(responded, "reported_syllable", "ba"),
+        "da_rate": _rate(responded, "reported_syllable", "da"),
+        "ga_rate": _rate(responded, "reported_syllable", "ga"),
+        "mean_rt_ms": float(mean_rt_ms),
+    }
+
+
 def run(options: TaskRunOptions):
     task_root = Path(__file__).resolve().parent
     cfg = load_config(str(options.config_path))
@@ -64,7 +136,6 @@ def run(options: TaskRunOptions):
 
 
 def _run_impl(*, mode: str, output_dir: Path | None, cfg: dict, participant_id: str):
-    # 2. Collect subject info (skip GUI in QA mode)
     if mode == "qa":
         subject_data = {"subject_id": "qa"}
     elif mode == "sim":
@@ -73,56 +144,51 @@ def _run_impl(*, mode: str, output_dir: Path | None, cfg: dict, participant_id: 
         subform = SubInfo(cfg["subform_config"])
         subject_data = subform.collect()
 
-    # 3. Load task settings
     settings = TaskSettings.from_dict(cfg["task_config"])
     if mode in ("qa", "sim") and output_dir is not None:
         settings.save_path = str(output_dir)
 
     settings.add_subinfo(subject_data)
 
-    # In QA mode, force deterministic artifact locations.
     if mode == "qa" and output_dir is not None:
         output_dir.mkdir(parents=True, exist_ok=True)
         settings.res_file = str(output_dir / "qa_trace.csv")
         settings.log_file = str(output_dir / "qa_psychopy.log")
         settings.json_file = str(output_dir / "qa_settings.json")
 
-    # 4. Setup triggers (mock in QA)
     settings.triggers = cfg["trigger_config"]
     if mode in ("qa", "sim"):
         trigger_runtime = _make_qa_trigger_runtime()
     else:
         trigger_runtime = initialize_triggers(cfg)
 
-    # 5. Set up window & input
     win, kb = initialize_exp(settings)
 
-    # 6. Setup stimulus bank (skip TTS/voice conversion in QA)
     stim_bank = StimBank(win, cfg["stim_config"])
     if mode not in ("qa", "sim"):
         stim_bank = stim_bank.convert_to_voice("instruction_text")
     stim_bank = stim_bank.preload_all()
 
-    # 7. Setup controller across blocks
     settings.controller = cfg["controller_config"]
     settings.save_to_json()
     controller = Controller.from_dict(settings.controller)
 
     trigger_runtime.send(settings.triggers.get("exp_onset"))
 
-    # Instruction
-    instr = StimUnit("instruction_text", win, kb, runtime=trigger_runtime).add_stim(
+    instruction = StimUnit("instruction_text", win, kb, runtime=trigger_runtime).add_stim(
         stim_bank.get("instruction_text")
     )
     if mode not in ("qa", "sim"):
-        instr.add_stim(stim_bank.get("instruction_text_voice"))
-    instr.wait_and_continue()
+        instruction.add_stim(stim_bank.get("instruction_text_voice"))
+    instruction.wait_and_continue()
 
-    all_data = []
-    for block_i in range(settings.total_blocks):
-        # 8. setup block
+    all_data: list[dict] = []
+    total_blocks = int(getattr(settings, "total_blocks", 1))
+
+    for block_i in range(total_blocks):
+        controller.start_block(block_i)
         if mode not in ("qa", "sim"):
-            count_down(win, 3, color="black")
+            count_down(win, 3, color="white")
 
         block = (
             BlockUnit(
@@ -132,49 +198,63 @@ def _run_impl(*, mode: str, output_dir: Path | None, cfg: dict, participant_id: 
                 window=win,
                 keyboard=kb,
             )
-                .generate_conditions()
-                .on_start(lambda b: trigger_runtime.send(settings.triggers.get("block_onset")))
-                .on_end(lambda b: trigger_runtime.send(settings.triggers.get("block_end")))
-                .run_trial(
-                    partial(
-                        run_trial,
-                        stim_bank=stim_bank,
-                        controller=controller,
-                        trigger_runtime=trigger_runtime,
-                        block_id=f"block_{block_i}",
-                        block_idx=block_i,
-                    )
+            .generate_conditions()
+            .on_start(lambda b: trigger_runtime.send(settings.triggers.get("block_onset")))
+            .on_end(lambda b: trigger_runtime.send(settings.triggers.get("block_end")))
+            .run_trial(
+                partial(
+                    run_trial,
+                    stim_bank=stim_bank,
+                    controller=controller,
+                    trigger_runtime=trigger_runtime,
+                    block_id=f"block_{block_i}",
+                    block_idx=block_i,
                 )
-                .to_dict(all_data)
             )
+            .to_dict(all_data)
+        )
 
-        block_trials = block.get_all_data()
+        block_summary = _summarize_trials(block.get_all_data())
 
-        # Calculate for the block feedback
-        hit_rate = sum(trial.get("target_hit", False) for trial in block_trials) / len(block_trials)
-        total_score = sum(trial.get("feedback_delta", 0) for trial in block_trials)
-        StimUnit("block", win, kb, runtime=trigger_runtime).add_stim(
-            stim_bank.get_and_format(
-                "block_break",
-                block_num=block_i + 1,
-                total_blocks=settings.total_blocks,
-                accuracy=hit_rate,
-                total_score=total_score,
-            )
-        ).wait_and_continue()
+        if block_i < (total_blocks - 1):
+            StimUnit("block", win, kb, runtime=trigger_runtime).add_stim(
+                stim_bank.get_and_format(
+                    "block_break",
+                    block_num=block_i + 1,
+                    total_blocks=total_blocks,
+                    total_trials=block_summary["total_trials"],
+                    responded_trials=block_summary["responded_trials"],
+                    response_rate=block_summary["response_rate"],
+                    mean_rt_ms=block_summary["mean_rt_ms"],
+                    fusion_rate=block_summary["fusion_rate"],
+                    ba_rate=block_summary["ba_rate"],
+                    da_rate=block_summary["da_rate"],
+                    ga_rate=block_summary["ga_rate"],
+                    incongruent_responded=block_summary["incongruent_responded"],
+                )
+            ).wait_and_continue()
 
-    final_score = sum(trial.get("feedback_delta", 0) for trial in all_data)
+    overall = _summarize_trials(all_data)
+
     StimUnit("goodbye", win, kb, runtime=trigger_runtime).add_stim(
-        stim_bank.get_and_format("good_bye", total_score=final_score)
+        stim_bank.get_and_format(
+            "good_bye",
+            total_trials=overall["total_trials"],
+            responded_trials=overall["responded_trials"],
+            response_rate=overall["response_rate"],
+            mean_rt_ms=overall["mean_rt_ms"],
+            fusion_rate=overall["fusion_rate"],
+            ba_rate=overall["ba_rate"],
+            da_rate=overall["da_rate"],
+            ga_rate=overall["ga_rate"],
+            incongruent_responded=overall["incongruent_responded"],
+        )
     ).wait_and_continue(terminate=True)
 
     trigger_runtime.send(settings.triggers.get("exp_end"))
 
-    # 9. Save data
-    df = pd.DataFrame(all_data)
-    df.to_csv(settings.res_file, index=False)
+    pd.DataFrame(all_data).to_csv(settings.res_file, index=False)
 
-    # 10. Close everything
     trigger_runtime.close()
     core.quit()
 

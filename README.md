@@ -1,26 +1,31 @@
-# McGurk Effect Task
+﻿# McGurk Effect Task
 
 ![Maturity: draft](https://img.shields.io/badge/Maturity-draft-64748b?style=flat-square&labelColor=111827)
 
 | Field | Value |
 |---|---|
 | Name | McGurk Effect Task |
-| Version | v0.1.1-dev |
+| Version | v0.2.0-dev |
 | URL / Repository | https://github.com/TaskBeacon/T000026-mcgurk |
-| Short Description | Audiovisual speech integration with congruent/incongruent and audio-only conditions. |
+| Short Description | Audiovisual speech integration task with congruent, incongruent, and audio-only trials for measuring McGurk fusion reports. |
 | Created By | TaskBeacon |
 | Date Updated | 2026-02-19 |
 | PsyFlow Version | 0.1.9 |
 | PsychoPy Version | 2025.1.1 |
 | Modality | Behavior |
 | Language | Chinese |
-| Voice Name | zh-CN-YunyangNeural (voice disabled by default) |
+| Voice Name | zh-CN-YunyangNeural (instruction voice optional) |
 
 ## 1. Task Overview
 
-This task implements a McGurk-style perceptual integration paradigm with three conditions: `congruent`, `incongruent`, and `audio_only`. Each trial presents a cue, an anticipation interval, a target display, and then feedback.
+This implementation presents concrete audiovisual syllable stimuli and collects 3-choice perceptual reports (`/ba/`, `/da/`, `/ga/`).
 
-Participants respond with `space` when they detect the target content during the response window. Trial logs record response timing, hit/miss outcomes, and condition-specific trigger streams for downstream QA and synchronization checks.
+The core manipulation is condition-level audiovisual congruency:
+- `congruent`: auditory and visual syllables match
+- `incongruent`: canonical mismatches (`A=/ba/ + V=/ga/`, `A=/ga/ + V=/ba/`)
+- `audio_only`: auditory syllable with neutral mouth cue
+
+Primary outcome is fusion tendency in incongruent trials (`report=/da/`).
 
 ## 2. Task Flow
 
@@ -28,35 +33,38 @@ Participants respond with `space` when they detect the target content during the
 
 | Step | Description |
 |---|---|
-| 1. Trial scheduling | `BlockUnit(...).add_condition(...)` loads the configured condition sequence per block. |
-| 2. Trial execution | `run_trial(...)` presents cue, anticipation, target, and feedback phases. |
-| 3. Block summary | Block-level accuracy and cumulative score are displayed. |
-| 4. Final summary | Final cumulative score is displayed at task end. |
+| 1. Block schedule | `BlockUnit.generate_conditions()` yields condition sequence per block. |
+| 2. Trial planning | `Controller.build_trial(condition)` samples concrete syllable pairing for the trial. |
+| 3. Trial execution | `run_trial(...)` executes `fixation -> av_stimulus -> decision -> feedback -> iti`. |
+| 4. Block summary | Response rate, RT, report distribution, and fusion rate are displayed. |
+| 5. Final summary | Same metrics are displayed across all trials at task end. |
 
 ### Trial-Level Flow
 
-| Step | Description |
+| Phase | Description |
 |---|---|
-| Cue | Condition-specific cue text is shown. |
-| Anticipation | Fixation is shown while early responses are tracked. |
-| Target | Condition-specific target is shown with response capture. |
-| Pre-feedback fixation | A short fixation interval separates target and feedback. |
-| Feedback | Hit/miss feedback is shown with score delta. |
+| `fixation` | Jittered fixation cross. |
+| `av_stimulus` | Face primitives + viseme + audio syllable are presented together. |
+| `decision` | Participant reports heard syllable (`F=/ba/`, `J=/da/`, `K=/ga/`). |
+| `feedback` | Response-recorded or timeout message. |
+| `iti` | Jittered inter-trial fixation. |
 
 ### Controller Logic
 
 | Component | Description |
 |---|---|
-| Adaptive duration | `Controller.get_duration(condition)` returns condition-specific target duration. |
-| Condition history | `Controller.update(hit, condition)` tracks performance by condition. |
-| Scoring | Trial delta is computed from response outcome and condition class. |
+| Trial sampler | Samples condition-specific pairings (`congruent`, `incongruent`, `audio_only`). |
+| Incongruent policy | Uses configured canonical pair list in `controller.incongruent_pairs`. |
+| Duration jitter | Samples fixation and ITI durations from configured ranges. |
+| Trial history | Stores trial-level records for block/final summaries. |
 
-### Runtime Context Phases
+### Other Logic
 
-| Phase Label | Meaning |
+| Component | Description |
 |---|---|
-| `anticipation` | Pre-target response window with fixation. |
-| `target` | Condition-specific target-response window. |
+| Report categories | `/ba/`, `/da/`, `/ga/` mapped to `F/J/K`. |
+| Fusion metric | `fusion_da=true` when incongruent trial report is `/da/`. |
+| No objective correctness feedback | Immediate feedback only indicates recorded vs timeout (percept report paradigm). |
 
 ## 3. Configuration Summary
 
@@ -73,7 +81,7 @@ Participants respond with `space` when they detect the target content during the
 | `size` | `[1280, 720]` |
 | `units` | `pix` |
 | `screen` | `0` |
-| `bg_color` | `gray` |
+| `bg_color` | `black` |
 | `fullscreen` | `false` |
 | `monitor_width_cm` | `35.5` |
 | `monitor_distance_cm` | `60` |
@@ -82,26 +90,50 @@ Participants respond with `space` when they detect the target content during the
 
 | Name | Type | Description |
 |---|---|---|
-| `*_cue` | text | Condition cue text (`congruent`, `incongruent`, `audio_only`). |
-| `fixation` | text | Central fixation marker used in anticipation/prefeedback. |
-| `*_target` | text | Condition target token used for response capture. |
-| `*_hit_feedback`, `*_miss_feedback` | text | Condition-specific feedback text. |
-| `block_break`, `good_bye` | text | Block transition and task-end summary. |
+| `avatar_face`, `eye_left`, `eye_right`, `nose` | circle/polygon | Shared facial scaffold for audiovisual display. |
+| `mouth_ba`, `mouth_da`, `mouth_ga`, `mouth_none` | rect/circle | Visual articulatory cues for congruent/incongruent/control trials. |
+| `audio_ba`, `audio_da`, `audio_ga` | sound | Syllable audio files (`assets/audio/*.wav`). |
+| `decision_prompt`, `key_hint` | text | Perceptual report question and key mapping hint. |
+| `feedback_recorded`, `feedback_timeout` | text | Trial-end status feedback. |
+| `block_break`, `good_bye` | text | Block/final summary metrics. |
 
 ### d. Timing
 
-| Phase | Duration |
+| Parameter | Value |
 |---|---|
-| cue | 0.5 s |
-| anticipation | 1.0 s |
-| prefeedback | 0.4 s |
-| feedback | 0.8 s |
-| target | adaptive via controller (`0.08`-`0.40` s bounds) |
+| `fixation_duration` | `[0.5, 0.8]` s |
+| `av_duration` | `1.1` s |
+| `decision_deadline` | `1.8` s |
+| `feedback_duration` | `0.7` s |
+| `iti_duration` | `[0.5, 0.9]` s |
+
+### Triggers
+
+| Trigger | Code |
+|---|---:|
+| `exp_onset`, `exp_end` | `1`, `2` |
+| `block_onset`, `block_end` | `10`, `11` |
+| `fixation_onset` | `20` |
+| `congruent_av_onset`, `incongruent_av_onset`, `audio_only_av_onset` | `30`, `31`, `32` |
+| `congruent_decision_onset`, `incongruent_decision_onset`, `audio_only_decision_onset` | `40`, `41`, `42` |
+| `response_ba`, `response_da`, `response_ga` | `50`, `51`, `52` |
+| `congruent_no_response`, `incongruent_no_response`, `audio_only_no_response` | `60`, `61`, `62` |
+| `response_recorded_fb_onset`, `timeout_fb_onset` | `70`, `71` |
+| `iti_onset` | `80` |
+
+### Adaptive / Trial Controller
+
+| Parameter | Value |
+|---|---|
+| `syllables` | `['ba', 'da', 'ga']` |
+| `incongruent_pairs` | `[['ba', 'ga'], ['ga', 'ba']]` |
+| `random_seed` | `null` (human), fixed in QA/sim profiles |
+| `enable_logging` | `true` |
 
 ## 4. Methods (for academic publication)
 
-Participants completed a perceptual integration task with congruent, incongruent, and audio-only speech-like conditions. Each trial included a cue, anticipation period, target response window, and explicit feedback, allowing condition-resolved analysis of hit rate and response timing.
+Participants completed a Chinese-instruction McGurk task in which they reported perceived syllables after short audiovisual presentations. Trials manipulated audiovisual congruency to compare matched speech, mismatched speech, and auditory-only control conditions.
 
-The implementation tracks trial-wise responses, early responses, adaptive target durations, and condition-specific performance history. Trigger events are emitted at cue, anticipation, target, and feedback onsets to support synchronized acquisition workflows.
+Each trial consisted of fixation, audiovisual presentation, forced-choice report, and short feedback/ITI. The implementation logs condition, presented auditory syllable, presented visual viseme, reported syllable, response latency, timeout status, and fusion indicator (`report=/da/` on incongruent trials).
 
-Runtime profiles include human, QA, scripted simulation, and sampler simulation modes using dedicated configuration files.
+Condition-specific onset and response triggers support synchronized behavioral/neurophysiological acquisition pipelines. QA and simulation profiles preserve the same mechanism with reduced trial counts.

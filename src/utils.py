@@ -1,105 +1,123 @@
+﻿from __future__ import annotations
 
-from typing import Dict, List, Optional
-from psychopy import logging
+import random
+from dataclasses import dataclass
+from typing import Any
+
+
+@dataclass
+class TrialSpec:
+    condition: str
+    audio_syllable: str
+    visual_syllable: str
+    expected_percept: str
 
 
 class Controller:
-    """
-    AdaptiveController dynamically adjusts stimulus duration based on participant performance,
-    aiming to maintain a target accuracy rate (e.g., 66%).
-
-    It supports both general (pooled) or condition-specific tracking,
-    and is suitable for use across multiple blocks of trials.
-    """
+    """Trial planner for McGurk-style audiovisual speech perception."""
 
     def __init__(
         self,
-        initial_duration: float = 0.25,
-        min_duration: float = 0.08,
-        max_duration: float = 0.4,
-        step: float = 0.02,
-        target_accuracy: float = 0.66,
-        condition_specific: bool = True,
-        enable_logging: bool = True
+        syllables: list[str] | None = None,
+        incongruent_pairs: list[list[str]] | None = None,
+        random_seed: int | None = None,
+        enable_logging: bool = True,
     ):
-        self.initial_duration = initial_duration
-        self.min_duration = min_duration
-        self.max_duration = max_duration
-        self.step = step
-        self.target_accuracy = target_accuracy
-        self.condition_specific = condition_specific
-        self.enable_logging = enable_logging
+        self.syllables = [str(s).strip().lower() for s in (syllables or ["ba", "da", "ga"]) if str(s).strip()]
+        if not self.syllables:
+            self.syllables = ["ba", "da", "ga"]
 
-        self.durations: Dict[Optional[str], float] = {}
-        self.histories: Dict[Optional[str], List[bool]] = {}
+        raw_pairs = incongruent_pairs or [["ba", "ga"], ["ga", "ba"]]
+        pairs: list[tuple[str, str]] = []
+        for pair in raw_pairs:
+            if not isinstance(pair, (list, tuple)) or len(pair) != 2:
+                continue
+            audio = str(pair[0]).strip().lower()
+            visual = str(pair[1]).strip().lower()
+            if audio and visual:
+                pairs.append((audio, visual))
+        if not pairs:
+            pairs = [("ba", "ga"), ("ga", "ba")]
+
+        self.incongruent_pairs = pairs
+        self.random_seed = random_seed
+        self.enable_logging = bool(enable_logging)
+
+        self._rng = random.Random(random_seed)
+        self._trial_counter = 0
+        self.histories: dict[str, list[dict[str, Any]]] = {}
 
     @classmethod
-    def from_dict(cls, config: dict) -> 'Controller':
-        """
-        Create an AdaptiveController instance from a flattened config dictionary.
-
-        - Missing keys are filled with defaults.
-        - Raises an error if unsupported keys are included.
-        """
+    def from_dict(cls, config: dict) -> "Controller":
         allowed_keys = {
-            'initial_duration': 0.25,
-            'min_duration': 0.1,
-            'max_duration': 0.4,
-            'step': 0.02,
-            'target_accuracy': 0.66,
-            'condition_specific': True,
-            'enable_logging': True
+            "syllables": ["ba", "da", "ga"],
+            "incongruent_pairs": [["ba", "ga"], ["ga", "ba"]],
+            "random_seed": None,
+            "enable_logging": True,
         }
-
-        # Check for unsupported keys
         extra_keys = set(config.keys()) - set(allowed_keys)
         if extra_keys:
-            raise ValueError(f"[AdaptiveController] Unsupported config keys: {extra_keys}")
+            raise ValueError(f"[Controller] Unsupported config keys: {extra_keys}")
 
-        # Fill in config with defaults
-        final_config = {k: config.get(k, default) for k, default in allowed_keys.items()}
+        final = {k: config.get(k, default) for k, default in allowed_keys.items()}
+        return cls(**final)
 
-        return cls(**final_config)
+    def start_block(self, block_idx: int) -> None:
+        _ = block_idx
 
-    def _get_key(self, condition: Optional[str]) -> Optional[str]:
-        return condition if self.condition_specific else None
+    def next_trial_id(self) -> int:
+        self._trial_counter += 1
+        return self._trial_counter
 
-    def update(self, hit: bool, condition: Optional[str] = None):
-        key = self._get_key(condition)
+    def sample_duration(self, value: Any, default: float) -> float:
+        if isinstance(value, (int, float)):
+            return float(value)
+        if isinstance(value, (list, tuple)) and len(value) >= 2:
+            lo = float(min(value[0], value[1]))
+            hi = float(max(value[0], value[1]))
+            return float(self._rng.uniform(lo, hi))
+        return float(default)
 
-        if key not in self.durations:
-            self.durations[key] = self.initial_duration
-            self.histories[key] = []
+    def _sample_syllable(self) -> str:
+        return str(self._rng.choice(self.syllables))
 
-        self.histories[key].append(bool(hit))
-        acc = sum(self.histories[key]) / len(self.histories[key])
-
-        old_duration = self.durations[key]
-        if acc > self.target_accuracy:
-            new_duration = max(self.min_duration, old_duration - self.step)
-        else:
-            new_duration = min(self.max_duration, old_duration + self.step)
-
-        self.durations[key] = new_duration
-
-        if self.enable_logging:
-            label = f"[{condition}]" if condition else ""
-            logging.data(
-                f"[Controller] Adaptive{label} - Trials: {len(self.histories[key])}, "
-                f"Accuracy: {acc:.2%}, Duration updated: {old_duration:.3f} -> {new_duration:.3f}"
+    def build_trial(self, condition: str) -> TrialSpec:
+        condition_id = str(condition).strip().lower()
+        if condition_id == "congruent":
+            syllable = self._sample_syllable()
+            return TrialSpec(
+                condition="congruent",
+                audio_syllable=syllable,
+                visual_syllable=syllable,
+                expected_percept=syllable,
             )
 
-    def get_duration(self, condition: Optional[str] = None) -> float:
-        key = self._get_key(condition)
-        if key not in self.durations:
-            self.durations[key] = self.initial_duration
-            self.histories[key] = []
-        return self.durations[key]
+        if condition_id == "incongruent":
+            audio_syllable, visual_syllable = self._rng.choice(self.incongruent_pairs)
+            return TrialSpec(
+                condition="incongruent",
+                audio_syllable=audio_syllable,
+                visual_syllable=visual_syllable,
+                expected_percept="da",
+            )
 
+        if condition_id == "audio_only":
+            syllable = self._sample_syllable()
+            return TrialSpec(
+                condition="audio_only",
+                audio_syllable=syllable,
+                visual_syllable="none",
+                expected_percept=syllable,
+            )
 
-    def describe(self):
-        print("Adaptive Controller Status")
-        for key, history in self.histories.items():
-            label = f"[{key}]" if key else "[All]"
-            acc = sum(history) / len(history)
-            print(f"{label} - Accuracy: {acc:.2%} ({len(history)} trials), Duration: {self.durations[key]:.3f}")
+        syllable = self._sample_syllable()
+        return TrialSpec(
+            condition=condition_id or "unknown",
+            audio_syllable=syllable,
+            visual_syllable="none",
+            expected_percept=syllable,
+        )
+
+    def record_trial(self, row: dict[str, Any]) -> None:
+        condition = str(row.get("condition", "unknown"))
+        self.histories.setdefault(condition, []).append(dict(row))

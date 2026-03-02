@@ -1,210 +1,255 @@
-subinfo_fields:
-- name: subject_id
-  type: int
-  constraints:
-    min: 101
-    max: 999
-    digits: 3
+﻿subinfo_fields:
+  - name: subject_id
+    type: int
+    constraints:
+      min: 101
+      max: 999
+      digits: 3
 subinfo_mapping:
-  subject_id: 被试编号（3位）
+  subject_id: 受试者编号（3位）
   Participant Information: 被试信息
   registration_failed: 注册失败
   registration_successful: 注册成功
-  invalid_input: '{field} 输入无效'
+  invalid_input: "{field} 输入无效"
 window:
-  size:
-  - 1280
-  - 720
+  size: [1280, 720]
   units: pix
   screen: 0
-  bg_color: gray
+  bg_color: black
   fullscreen: false
   monitor_width_cm: 35.5
   monitor_distance_cm: 60
 task:
   task_name: mcgurk
+  delta: 1
   save_path: ./outputs/sim
   total_blocks: 1
-  total_trials: 9
-  trial_per_block: 9
+  total_trials: 12
+  trial_per_block: 12
   conditions:
-  - congruent
-  - incongruent
-  - audio_only
+    - congruent
+    - incongruent
+    - audio_only
   key_list:
-  - f
-  - j
-  - k
-  - space
+    - f
+    - j
+    - k
+    - space
+  ba_key: f
+  da_key: j
+  ga_key: k
   seed_mode: same_across_sub
-  delta: 1
   language: Chinese
   voice_name: zh-CN-YunyangNeural
   voice_enabled: false
 timing:
-  cue_duration: 0.5
-  anticipation_duration: 1.0
-  prefeedback_duration: 0.4
-  feedback_duration: 0.8
+  fixation_duration: [0.5, 0.8]
+  av_duration: 1.1
+  decision_deadline: 1.8
+  feedback_duration: 0.7
+  iti_duration: [0.5, 0.9]
 stimuli:
-  fixation:
-    type: text
-    text: +
-    color: white
-    height: 48
-    font: SimHei
   instruction_text:
     type: text
-    text: '麦格克效应任务
+    text: |
+      麦格克效应任务
 
+      每轮会同时呈现语音和口型（或仅语音）。
+      请报告你主观“听到”的音节。
 
-      你将听到语音并看到口型。
+      按键映射：
+      F = /ba/
+      J = /da/
+      K = /ga/
 
-      请报告你知觉到的音节：
-
-      F=/ba/，J=/da/，K=/ga/。
-
-
-      请尽量又快又准。按空格键开始。'
+      请尽量快速且准确地作答。
+      按空格键开始。
     color: white
+    height: 30
+    wrapWidth: 1020
+    pos: [0, 70]
+    font: SimHei
+  fixation:
+    type: text
+    text: "+"
+    color: white
+    height: 52
+    pos: [0, 0]
+    font: SimHei
+  avatar_face:
+    type: circle
+    radius: 160
+    pos: [0, 40]
+    fillColor: [0.96, 0.86, 0.72]
+    lineColor: [0.85, 0.74, 0.60]
+    lineWidth: 3
+  eye_left:
+    type: circle
+    radius: 14
+    pos: [-58, 95]
+    fillColor: [0.1, 0.1, 0.1]
+    lineColor: [0.1, 0.1, 0.1]
+    lineWidth: 1
+  eye_right:
+    type: circle
+    radius: 14
+    pos: [58, 95]
+    fillColor: [0.1, 0.1, 0.1]
+    lineColor: [0.1, 0.1, 0.1]
+    lineWidth: 1
+  nose:
+    type: polygon
+    edges: 3
+    radius: 14
+    ori: 180
+    pos: [0, 52]
+    fillColor: [0.84, 0.68, 0.56]
+    lineColor: [0.84, 0.68, 0.56]
+    lineWidth: 1
+  mouth_ba:
+    type: rect
+    width: 175
+    height: 18
+    pos: [0, -8]
+    fillColor: [0.58, 0.12, 0.12]
+    lineColor: [0.45, 0.08, 0.08]
+    lineWidth: 2
+  mouth_da:
+    type: rect
+    width: 120
+    height: 48
+    pos: [0, -8]
+    fillColor: [0.58, 0.12, 0.12]
+    lineColor: [0.45, 0.08, 0.08]
+    lineWidth: 2
+  mouth_ga:
+    type: circle
+    radius: 34
+    pos: [0, -8]
+    fillColor: [0.58, 0.12, 0.12]
+    lineColor: [0.45, 0.08, 0.08]
+    lineWidth: 2
+  mouth_none:
+    type: rect
+    width: 150
+    height: 6
+    pos: [0, -8]
+    fillColor: [0.52, 0.36, 0.28]
+    lineColor: [0.52, 0.36, 0.28]
+    lineWidth: 1
+  speech_prompt:
+    type: text
+    text: "请听声音并观察口型"
+    color: [0.95, 0.95, 0.95]
     height: 28
+    wrapWidth: 900
+    pos: [0, -220]
+    font: SimHei
+  decision_prompt:
+    type: text
+    text: "你听到的音节是？"
+    color: [0.97, 0.93, 0.66]
+    height: 40
+    pos: [0, 120]
+    font: SimHei
+  key_hint:
+    type: text
+    text: "按键：{ba_key}=/ba/，{da_key}=/da/，{ga_key}=/ga/"
+    color: [0.90, 0.90, 0.90]
+    height: 30
     wrapWidth: 980
+    pos: [0, 40]
     font: SimHei
-  congruent_cue:
+  feedback_recorded:
     type: text
-    text: 线索：一致条件
-    color: white
-    height: 44
-    wrapWidth: 900
+    text: |
+      已记录
+      你的报告：/{reported_syllable}/
+      按键：{response_key}
+    color: [0.72, 0.96, 0.72]
+    height: 32
+    wrapWidth: 980
+    pos: [0, 20]
     font: SimHei
-  incongruent_cue:
+  feedback_timeout:
     type: text
-    text: 线索：不一致条件
-    color: white
-    height: 44
-    wrapWidth: 900
-    font: SimHei
-  audio_only_cue:
-    type: text
-    text: 线索：仅听觉条件
-    color: yellow
-    height: 44
-    wrapWidth: 900
-    font: SimHei
-  congruent_target:
-    type: text
-    text: '你听到哪个音节？
-
-      F=/ba/   J=/da/   K=/ga/'
-    color: white
-    height: 54
-    wrapWidth: 900
-    font: SimHei
-  incongruent_target:
-    type: text
-    text: '你听到哪个音节？（可能出现融合知觉）
-
-      F=/ba/   J=/da/   K=/ga/'
-    color: white
-    height: 54
-    wrapWidth: 900
-    font: SimHei
-  audio_only_target:
-    type: text
-    text: '你听到哪个音节？
-
-      F=/ba/   J=/da/   K=/ga/'
-    color: white
-    height: 54
-    wrapWidth: 900
-    font: SimHei
-  congruent_hit_feedback:
-    type: text
-    text: 反应已记录
-    color: green
-    height: 42
-    font: SimHei
-  congruent_miss_feedback:
-    type: text
-    text: 未在时限内作答
-    color: red
-    height: 42
-    font: SimHei
-  incongruent_hit_feedback:
-    type: text
-    text: 反应已记录
-    color: green
-    height: 42
-    font: SimHei
-  incongruent_miss_feedback:
-    type: text
-    text: 未在时限内作答
-    color: red
-    height: 42
-    font: SimHei
-  audio_only_hit_feedback:
-    type: text
-    text: 反应已记录
-    color: green
-    height: 42
-    font: SimHei
-  audio_only_miss_feedback:
-    type: text
-    text: 未在时限内作答
-    color: red
-    height: 42
+    text: |
+      本轮超时，未记录到按键
+      请在下一轮尽快作答
+    color: [1.0, 0.65, 0.65]
+    height: 30
+    wrapWidth: 980
+    pos: [0, 20]
     font: SimHei
   block_break:
     type: text
-    text: '区块 {block_num}/{total_blocks}
+    text: |
+      第 {block_num}/{total_blocks} 组完成
 
-      记录率：{accuracy:.2%}
+      本组试次数：{total_trials}
+      有效作答数：{responded_trials}
+      作答率：{response_rate:.1%}
+      平均反应时：{mean_rt_ms:.0f} ms
 
-      当前分数：{total_score}
+      报告分布：/ba/={ba_rate:.1%}，/da/={da_rate:.1%}，/ga/={ga_rate:.1%}
+      不一致条件融合率（/da/）：{fusion_rate:.1%}（n={incongruent_responded}）
 
-
-      按空格键继续'
+      按空格键继续。
     color: white
-    height: 24
-    wrapWidth: 900
+    height: 25
+    wrapWidth: 1100
+    pos: [0, 0]
     font: SimHei
   good_bye:
     type: text
-    text: '任务结束，最终分数：{total_score}
+    text: |
+      任务结束
 
+      总试次数：{total_trials}
+      有效作答数：{responded_trials}
+      作答率：{response_rate:.1%}
+      平均反应时：{mean_rt_ms:.0f} ms
 
-      按空格键退出'
+      报告分布：/ba/={ba_rate:.1%}，/da/={da_rate:.1%}，/ga/={ga_rate:.1%}
+      不一致条件融合率（/da/）：{fusion_rate:.1%}（n={incongruent_responded}）
+
+      按空格键退出。
     color: white
-    height: 28
-    wrapWidth: 900
+    height: 25
+    wrapWidth: 1100
+    pos: [0, 0]
     font: SimHei
+  audio_ba:
+    type: sound
+    file: ./assets/audio/ba.wav
+  audio_da:
+    type: sound
+    file: ./assets/audio/da.wav
+  audio_ga:
+    type: sound
+    file: ./assets/audio/ga.wav
 triggers:
   map:
     exp_onset: 1
     exp_end: 2
     block_onset: 10
     block_end: 11
-    congruent_cue_onset: 20
-    incongruent_cue_onset: 21
-    audio_only_cue_onset: 22
-    congruent_anti_onset: 30
-    incongruent_anti_onset: 31
-    audio_only_anti_onset: 32
-    congruent_target_onset: 40
-    incongruent_target_onset: 41
-    audio_only_target_onset: 42
-    congruent_key_press: 50
-    incongruent_key_press: 51
-    audio_only_key_press: 52
+    fixation_onset: 20
+    congruent_av_onset: 30
+    incongruent_av_onset: 31
+    audio_only_av_onset: 32
+    congruent_decision_onset: 40
+    incongruent_decision_onset: 41
+    audio_only_decision_onset: 42
+    response_ba: 50
+    response_da: 51
+    response_ga: 52
     congruent_no_response: 60
     incongruent_no_response: 61
     audio_only_no_response: 62
-    congruent_hit_fb_onset: 70
-    congruent_miss_fb_onset: 71
-    incongruent_hit_fb_onset: 72
-    incongruent_miss_fb_onset: 73
-    audio_only_hit_fb_onset: 74
-    audio_only_miss_fb_onset: 75
+    response_recorded_fb_onset: 70
+    timeout_fb_onset: 71
+    iti_onset: 80
   driver:
     type: serial_url
     url: loop://
@@ -214,12 +259,11 @@ triggers:
   policy:
     strict: false
 controller:
-  initial_duration: 0.25
-  min_duration: 0.08
-  max_duration: 0.4
-  step: 0.02
-  target_accuracy: 0.66
-  condition_specific: true
+  syllables: [ba, da, ga]
+  incongruent_pairs:
+    - [ba, ga]
+    - [ga, ba]
+  random_seed: 11
   enable_logging: true
 sim:
   output_dir: outputs/sim
@@ -228,10 +272,10 @@ sim:
   session_id: sub-sim001_task-mcgurk_seed0
   log_path: outputs/sim/sub-sim001_task-mcgurk_seed0_sim_events.jsonl
   policy: warn
-  default_rt_s: 0.2
+  default_rt_s: 0.30
   clamp_rt: false
   responder:
     type: scripted
     kwargs:
-      key: f
-      rt_s: 0.25
+      key: j
+      rt_s: 0.35
