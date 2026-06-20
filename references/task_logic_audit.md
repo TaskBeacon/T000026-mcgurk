@@ -23,7 +23,7 @@
 - Trigger: `fixation_onset`.
 
 2. `av_stimulus`
-- Face primitives, condition-appropriate mouth shape, and syllable audio are presented simultaneously.
+- Face primitives, condition-appropriate dynamic mouth-frame sequence, and syllable audio are presented simultaneously.
 - Trigger: `{condition}_av_onset`.
 
 3. `decision`
@@ -67,8 +67,9 @@
 
 ## 5. Stimulus Layout Plan
 
-- AV screen uses explicit face geometry with fixed positions:
+- AV screen uses explicit face geometry with fixed positions and a short dynamic mouth-frame sequence:
 - face center `(0, 40)`, eyes at `(-58, 95)` and `(58, 95)`, nose at `(0, 52)`, mouth at `(0, -8)`.
+- visible syllables use multiple mouth frames (`ba`, `da`, `ga`) during the audio window; `audio_only` uses a neutral non-articulatory mouth.
 - `speech_prompt` appears below the face at `(0, -220)`.
 - Decision screen shows question at `(0, 120)` and key hint at `(0, 40)`.
 - All Chinese participant-facing text uses `font: SimHei`.
@@ -102,11 +103,13 @@
 
 - `main.py` uses one mode-aware execution path (`human|qa|sim`) with shared initialization order.
 - `src/run_trial.py` is aligned to McGurk-specific states; legacy MID sequence labels are removed.
+- The AV phase uses a custom frame-based helper so mouth articulation changes during the sound window while preserving flip-locked onset triggers.
 - Participant-facing text is sourced from config stimuli via `StimBank`, not hardcoded in runtime logic.
-- Trial context contains condition/audio/visual/expected-percept factors for reproducible simulation and audit.
+- Trial context contains condition/audio/visual/expected-percept factors and visual-frame counts for reproducible simulation and audit.
 
 ## 8. Inference Log
 
 - Exact fixation and ITI jitter ranges are inferred implementation parameters; selected papers constrain temporal sensitivity but do not prescribe these exact values.
 - The chosen incongruent pair set (`ba+ga`, `ga+ba`) is inferred from canonical McGurk protocols.
+- The primitive-based dynamic mouth-frame trajectories are an inferred local implementation of visual articulation when licensed face videos are not bundled.
 - The auditory-only condition with neutral mouth cue is an inferred control implementation to isolate unimodal perception effects.

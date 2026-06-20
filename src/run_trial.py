@@ -1,33 +1,10 @@
 from __future__ import annotations
 
 from functools import partial
-from typing import Any
 
-from psyflow import StimUnit, set_trial_context
+from psyflow import StimUnit, next_trial_id, resolve_deadline, set_trial_context
 
-
-def _deadline_s(value: Any) -> float | None:
-    if isinstance(value, (int, float)):
-        return float(value)
-    if isinstance(value, (list, tuple)) and value:
-        try:
-            return float(max(value))
-        except Exception:
-            return None
-    return None
-
-
-def _as_duration(controller, value: Any, default_value: float) -> float:
-    if hasattr(controller, "sample_duration"):
-        return float(controller.sample_duration(value, default_value))
-    if isinstance(value, (int, float)):
-        return float(value)
-    if isinstance(value, (list, tuple)) and value:
-        try:
-            return float(max(value))
-        except Exception:
-            return float(default_value)
-    return float(default_value)
+from .utils import mcgurk_condition_to_trial_spec
 
 
 def _response_to_syllable(response_key: str | None, *, ba_key: str, da_key: str, ga_key: str) -> str | None:
@@ -53,22 +30,20 @@ def run_trial(
     block_idx=None,
 ):
     """Run one McGurk trial with audiovisual presentation and syllable report."""
-    condition_name = str(condition).strip().lower()
-    trial_id = int(controller.next_trial_id()) if hasattr(controller, "next_trial_id") else 1
+    trial_spec = mcgurk_condition_to_trial_spec(condition)
+    trial_id = next_trial_id()
     block_idx_val = int(block_idx) if block_idx is not None else 0
-
-    trial_spec = controller.build_trial(condition_name)
 
     ba_key = str(getattr(settings, "ba_key", "f")).strip().lower()
     da_key = str(getattr(settings, "da_key", "j")).strip().lower()
     ga_key = str(getattr(settings, "ga_key", "k")).strip().lower()
     response_keys = [ba_key, da_key, ga_key]
 
-    fixation_duration = _as_duration(controller, settings.fixation_duration, 0.6)
-    av_duration = float(settings.av_duration)
-    decision_deadline = float(settings.decision_deadline)
-    feedback_duration = float(settings.feedback_duration)
-    iti_duration = _as_duration(controller, settings.iti_duration, 0.7)
+    fixation_duration = float(resolve_deadline(settings.fixation_duration) or 0.6)
+    av_duration = float(resolve_deadline(settings.av_duration) or 1.1)
+    decision_deadline = float(resolve_deadline(settings.decision_deadline) or 1.8)
+    feedback_duration = float(resolve_deadline(settings.feedback_duration) or 0.7)
+    iti_duration = float(resolve_deadline(settings.iti_duration) or 0.7)
 
     trial_data = {
         "trial_id": trial_id,
@@ -87,7 +62,7 @@ def run_trial(
         fixation,
         trial_id=trial_id,
         phase="fixation",
-        deadline_s=_deadline_s(fixation_duration),
+        deadline_s=resolve_deadline(fixation_duration),
         valid_keys=[],
         block_id=trial_data["block_id"],
         condition_id=trial_spec.condition,
@@ -101,16 +76,11 @@ def run_trial(
         },
         stim_id="fixation",
     )
-    fixation.show(
-        duration=fixation_duration,
-        onset_trigger=settings.triggers.get("fixation_onset"),
-    ).to_dict(trial_data)
+    fixation.show(duration=fixation_duration, onset_trigger=settings.triggers.get("fixation_onset")).to_dict(trial_data)
 
     av_stimulus = make_unit(unit_label="av_stimulus")
-    av_stimulus.add_stim(stim_bank.get("avatar_face"))
-    av_stimulus.add_stim(stim_bank.get("eye_left"))
-    av_stimulus.add_stim(stim_bank.get("eye_right"))
-    av_stimulus.add_stim(stim_bank.get("nose"))
+    for stim_id in ("avatar_face", "eye_left", "eye_right", "nose"):
+        av_stimulus.add_stim(stim_bank.get(stim_id))
     av_stimulus.add_stim(stim_bank.get(f"mouth_{trial_spec.visual_syllable}"))
     av_stimulus.add_stim(stim_bank.get("speech_prompt"))
     av_stimulus.add_stim(stim_bank.get(f"audio_{trial_spec.audio_syllable}"))
@@ -118,7 +88,7 @@ def run_trial(
         av_stimulus,
         trial_id=trial_id,
         phase="av_stimulus",
-        deadline_s=_deadline_s(av_duration),
+        deadline_s=resolve_deadline(av_duration),
         valid_keys=[],
         block_id=trial_data["block_id"],
         condition_id=trial_spec.condition,
@@ -136,6 +106,8 @@ def run_trial(
         duration=av_duration,
         onset_trigger=settings.triggers.get(f"{trial_spec.condition}_av_onset"),
     ).to_dict(trial_data)
+    trial_data["visual_frame_count"] = 1
+    trial_data["visual_animation_frames"] = 1
 
     decision = make_unit(unit_label="decision")
     decision.add_stim(stim_bank.get("decision_prompt"))
@@ -151,7 +123,7 @@ def run_trial(
         decision,
         trial_id=trial_id,
         phase="decision",
-        deadline_s=_deadline_s(decision_deadline),
+        deadline_s=resolve_deadline(decision_deadline),
         valid_keys=response_keys,
         block_id=trial_data["block_id"],
         condition_id=trial_spec.condition,
@@ -172,7 +144,11 @@ def run_trial(
         keys=response_keys,
         duration=decision_deadline,
         onset_trigger=settings.triggers.get(f"{trial_spec.condition}_decision_onset"),
-        response_trigger=None,
+        response_trigger={
+            ba_key: settings.triggers.get("response_ba"),
+            da_key: settings.triggers.get("response_da"),
+            ga_key: settings.triggers.get("response_ga"),
+        },
         timeout_trigger=settings.triggers.get(f"{trial_spec.condition}_no_response"),
     )
     decision.to_dict(trial_data)
@@ -185,13 +161,6 @@ def run_trial(
         ga_key=ga_key,
     )
     timed_out = reported_syllable is None
-
-    if reported_syllable == "ba":
-        trigger_runtime.send(settings.triggers.get("response_ba"))
-    elif reported_syllable == "da":
-        trigger_runtime.send(settings.triggers.get("response_da"))
-    elif reported_syllable == "ga":
-        trigger_runtime.send(settings.triggers.get("response_ga"))
 
     feedback_stim = "feedback_timeout" if timed_out else "feedback_recorded"
     feedback_onset = "timeout_fb_onset" if timed_out else "response_recorded_fb_onset"
@@ -207,7 +176,7 @@ def run_trial(
         feedback,
         trial_id=trial_id,
         phase="feedback",
-        deadline_s=_deadline_s(feedback_duration),
+        deadline_s=resolve_deadline(feedback_duration),
         valid_keys=[],
         block_id=trial_data["block_id"],
         condition_id=trial_spec.condition,
@@ -220,27 +189,21 @@ def run_trial(
         },
         stim_id=feedback_stim,
     )
-    feedback.show(
-        duration=feedback_duration,
-        onset_trigger=settings.triggers.get(feedback_onset),
-    ).to_dict(trial_data)
+    feedback.show(duration=feedback_duration, onset_trigger=settings.triggers.get(feedback_onset)).to_dict(trial_data)
 
     iti = make_unit(unit_label="iti").add_stim(stim_bank.get("fixation"))
     set_trial_context(
         iti,
         trial_id=trial_id,
         phase="inter_trial_interval",
-        deadline_s=_deadline_s(iti_duration),
+        deadline_s=resolve_deadline(iti_duration),
         valid_keys=[],
         block_id=trial_data["block_id"],
         condition_id=trial_spec.condition,
         task_factors={"stage": "inter_trial_interval", "block_idx": block_idx_val},
         stim_id="fixation",
     )
-    iti.show(
-        duration=iti_duration,
-        onset_trigger=settings.triggers.get("iti_onset"),
-    ).to_dict(trial_data)
+    iti.show(duration=iti_duration, onset_trigger=settings.triggers.get("iti_onset")).to_dict(trial_data)
 
     rt = decision.get_state("rt", None)
     key_press = decision.get_state("key_press", None)
@@ -254,5 +217,4 @@ def run_trial(
     trial_data["fusion_da"] = bool(trial_spec.condition == "incongruent" and reported_syllable == "da")
 
     controller.record_trial(trial_data)
-
     return trial_data

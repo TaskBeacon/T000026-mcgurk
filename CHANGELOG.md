@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [Unreleased]
+
+### Fixed
+- Replaced the static McGurk mouth display with a frame-varying visual-speech sequence during `av_stimulus`.
+- Logged `visual_frame_count` and `visual_animation_frames` for AV-phase auditability.
+- Updated McGurk reference artifacts to describe the dynamic mouth-frame implementation.
+
 ## [v0.2.1-dev] - 2026-03-02
 
 ### Changed
