@@ -251,9 +251,8 @@ triggers:
     timeout_fb_onset: 71
     iti_onset: 80
   driver:
-    type: serial_url
-    url: loop://
-    baudrate: 115200
+    type: mock
+    print_codes: true
   timing:
     post_delay_ms: 1
   policy:
